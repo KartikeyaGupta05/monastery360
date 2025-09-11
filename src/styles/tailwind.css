@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #FAF9F6; /* warm off-white */
+    --color-foreground: #2C1810; /* deep brown */
+    --color-border: #6B5B4F; /* muted brown */
+    --color-input: #FFFFFF; /* pure white */
+    --color-ring: #4682B4; /* himalayan sky blue */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* pure white */
+    --color-card-foreground: #2C1810; /* deep brown */
+    
+    /* Popover Colors */
+    --color-popover: #FFFFFF; /* pure white */
+    --color-popover-foreground: #2C1810; /* deep brown */
+    
+    /* Muted Colors */
+    --color-muted: #F5F4F1; /* light warm gray */
+    --color-muted-foreground: #6B5B4F; /* muted brown */
+    
+    /* Primary Colors */
+    --color-primary: #8B4513; /* monastery brick brown */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #DAA520; /* temple gold */
+    --color-secondary-foreground: #2C1810; /* deep brown */
+    
+    /* Accent Colors */
+    --color-accent: #4682B4; /* himalayan sky blue */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #228B22; /* forest green */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #FF8C00; /* saffron orange */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error/Destructive Colors */
+    --color-error: #B22222; /* deep red */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #B22222; /* deep red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .breathing-card {
+    @apply transition-all duration-300 ease-out hover:shadow-lg;
+    box-shadow: 0 2px 12px rgba(139, 69, 19, 0.1);
+  }
+  
+  .breathing-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(139, 69, 19, 0.15);
+  }
+  
+  .contemplative-pulse {
+    animation: contemplative-pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes contemplative-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  
+  .ambient-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  .spiritual-shadow {
+    box-shadow: 0 4px 20px rgba(139, 69, 19, 0.1);
+  }
+  
+  .spiritual-shadow-lg {
+    box-shadow: 0 8px 32px rgba(139, 69, 19, 0.15);
+  }
+}
