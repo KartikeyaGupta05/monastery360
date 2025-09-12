@@ -18,7 +18,7 @@ const Header = () => {
   }, []);
 
   const navigationItems = [
-    { label: 'Home', path: '/homepage', icon: 'Home' },
+    { label: 'Home', path: '/', icon: 'Home' },
     { 
       label: 'Explore', 
       path: '/virtual-tour-experience', 

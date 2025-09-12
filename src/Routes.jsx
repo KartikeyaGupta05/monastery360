@@ -18,7 +18,7 @@ const Routes = () => {
       <ScrollToTop />
       <RouterRoutes>
         {/* Define your route here */}
-        <Route path="/homepage" element={<Homepage />} />
+        <Route path="/" element={<Homepage />} />
         <Route path="/artisan-connect-marketplace" element={<ArtisanConnectMarketplace />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/interactive-mandala-ai" element={<InteractiveMandalaAI />} />
