@@ -60,7 +60,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 px-6">
           {/* Logo */}
           <Link 
-            to="/homepage" 
+            to="/" 
             className="flex items-center space-x-3 group"
           >
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
