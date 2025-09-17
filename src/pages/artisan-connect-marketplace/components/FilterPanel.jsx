@@ -563,7 +563,7 @@ const FilterPanel = ({ filters, onFiltersChange, isOpen, onToggle, resultCount =
         />
       )}
 
-      <style jsx>{`
+      <style>{`
         .slider::-webkit-slider-thumb {
           appearance: none;
           width: 20px;

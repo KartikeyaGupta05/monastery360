@@ -26,7 +26,7 @@ const TeamSection = () => {
     },
     {
       id: 3,
-      name: "Rahul Shrarma",
+      name: "Rahul Sharma",
       role: "Backend Developer & DevOps",
       expertise: "Monastery History, Cultural Preservation",
       image: "/assets/images/rahul.jpg",

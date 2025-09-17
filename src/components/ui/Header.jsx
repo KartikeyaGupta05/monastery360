@@ -74,7 +74,7 @@ const Header = () => {
               </svg>
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-heading font-semibold text-xl text-foreground">
+              <h1 className="font-heading font-semibold text-xl text-foreground ">
                 Monastery360
               </h1>
               <p className="font-caption text-xs text-muted-foreground -mt-1">
