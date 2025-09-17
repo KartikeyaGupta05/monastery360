@@ -9,6 +9,7 @@ function VR_360() {
     "/assets/images/360image.jpg",
     "/assets/images/image2.jpg",
     "/assets/images/360image2.jpg",
+    "/assets/images/image3.png",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
