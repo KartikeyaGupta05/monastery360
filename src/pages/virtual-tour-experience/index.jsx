@@ -15,10 +15,9 @@ import {
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Header from "components/ui/Header";
-
+import HelpOverlay from "./components/HelpOverlay";
 
 export default function VirtualTourExperience() {
-  const navigate = useNavigate();
   const images = [
     "/assets/images/image1.jpg",
     "/assets/images/image6.png",
@@ -31,6 +30,7 @@ export default function VirtualTourExperience() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [fov, setFov] = useState(80); // camera FOV: lower = zoomed in
   const [isMuted, setIsMuted] = useState(true); // for ambient audio if present
+  const [showHelp, setShowHelp] = useState(true);
 
   const sceneContainerRef = useRef(null);
   const skyRef = useRef(null);
@@ -42,6 +42,14 @@ export default function VirtualTourExperience() {
     const sky = document.querySelector("#sky");
     if (sky) sky.setAttribute("src", images[currentIndex]);
   }, [currentIndex, images]);
+
+  // useEffect(() => {
+  //   const hasVisited = localStorage.getItem('monastery360-tour-visited');
+  //   if (!hasVisited) {
+  //     setShowHelp(true);
+  //     localStorage.setItem('monastery360-tour-visited', 'true');
+  //   }
+  // }, []);
 
   // update camera FOV
   useEffect(() => {
@@ -118,7 +126,8 @@ export default function VirtualTourExperience() {
 
   // navigation functions
   const next = () => setCurrentIndex((i) => (i + 1) % images.length);
-  const prev = () => setCurrentIndex((i) => (i === 0 ? images.length - 1 : i - 1));
+  const prev = () =>
+    setCurrentIndex((i) => (i === 0 ? images.length - 1 : i - 1));
 
   const zoomIn = () => setFov((v) => Math.max(30, v - 5));
   const zoomOut = () => setFov((v) => Math.min(100, v + 5));
@@ -152,7 +161,6 @@ export default function VirtualTourExperience() {
   const setImage = (idx) => setCurrentIndex(idx);
 
   return (
-
     <div
       ref={sceneContainerRef}
       style={{
@@ -164,10 +172,17 @@ export default function VirtualTourExperience() {
       }}
     >
       <Header />
+      {/* Help Overlay */}
+      <HelpOverlay isVisible={showHelp} onClose={() => setShowHelp(false)} />
       {/* A-Frame scene (no in-scene clickable cursor) */}
       <a-scene embedded style={{ height: "100%", width: "100%" }}>
         {/* Sky */}
-        <a-sky id="sky" ref={skyRef} src={images[currentIndex]} rotation="0 0 0"></a-sky>
+        <a-sky
+          id="sky"
+          ref={skyRef}
+          src={images[currentIndex]}
+          rotation="0 0 0"
+        ></a-sky>
 
         {/* Camera entity - we'll control its FOV */}
         <a-entity
@@ -261,7 +276,14 @@ export default function VirtualTourExperience() {
         </button>
 
         {/* Divider visual */}
-        <div style={{ width: 1, height: 28, background: "rgba(255,255,255,0.06)", margin: "0 8px" }} />
+        <div
+          style={{
+            width: 1,
+            height: 28,
+            background: "rgba(255,255,255,0.06)",
+            margin: "0 8px",
+          }}
+        />
 
         {/* Mute / Unmute */}
         <button
@@ -282,8 +304,6 @@ export default function VirtualTourExperience() {
         >
           {isFullscreen ? <FaCompress /> : <FaExpand />}
         </button>
-
-        
 
         {/* Counter */}
         <div
@@ -330,8 +350,14 @@ export default function VirtualTourExperience() {
               backgroundSize: "cover",
               backgroundPosition: "center",
               borderRadius: 6,
-              border: idx === currentIndex ? "3px solid #4ecdc4" : "2px solid rgba(255,255,255,0.08)",
-              boxShadow: idx === currentIndex ? "0 6px 20px rgba(78,205,196,0.18)" : "none",
+              border:
+                idx === currentIndex
+                  ? "3px solid #4ecdc4"
+                  : "2px solid rgba(255,255,255,0.08)",
+              boxShadow:
+                idx === currentIndex
+                  ? "0 6px 20px rgba(78,205,196,0.18)"
+                  : "none",
               cursor: "pointer",
               padding: 0,
             }}
@@ -377,4 +403,3 @@ const iconButtonStyle = {
   transition: "transform 120ms ease, background 120ms ease",
   outline: "none",
 };
-
