@@ -176,7 +176,7 @@ const Contact = () => {
               <div>
                 <h4 className="font-body font-semibold mb-4">Quick Links</h4>
                 <ul className="space-y-2 text-background/80">
-                  <li><a href="/homepage" className="hover:text-background transition-colors">Home</a></li>
+                  <li><a href="/" className="hover:text-background transition-colors">Home</a></li>
                   <li><a href="/virtual-tour-experience" className="hover:text-background transition-colors">Virtual Tours</a></li>
                   <li><a href="/interactive-mandala-ai" className="hover:text-background transition-colors">Mandala AI</a></li>
                   <li><a href="/artisan-connect-marketplace" className="hover:text-background transition-colors">Artisan Connect</a></li>

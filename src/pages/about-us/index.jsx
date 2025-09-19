@@ -65,7 +65,7 @@ const AboutUs = () => {
             <div>
               <h4 className="font-heading font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 font-body text-sm">
-                <li><a href="/homepage" className="opacity-80 hover:opacity-100 transition-opacity">Home</a></li>
+                <li><a href="/" className="opacity-80 hover:opacity-100 transition-opacity">Home</a></li>
                 <li><a href="/virtual-tour-experience" className="opacity-80 hover:opacity-100 transition-opacity">Virtual Tours</a></li>
                 <li><a href="/interactive-mandala-ai" className="opacity-80 hover:opacity-100 transition-opacity">Mandala AI</a></li>
                 <li><a href="/artisan-connect-marketplace" className="opacity-80 hover:opacity-100 transition-opacity">Artisan Connect</a></li>
