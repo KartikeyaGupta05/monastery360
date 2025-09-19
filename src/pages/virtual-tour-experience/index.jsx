@@ -13,22 +13,9 @@ import {
   FaVolumeUp,
   FaVolumeMute,
 } from "react-icons/fa";
-import {Home} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "components/ui/Header";
 
-/**
- * VR_360.jsx
- * - HTML overlay control bar (glass look) with icons (like your screenshot)
- * - Prev/Next, Play/Pause, Zoom in/out, Fullscreen, Mute
- * - Keyboard shortcuts
- * - Thumbnails and image counter
- *
- * Notes:
- * - Make sure images in `images[]` exist under /public/assets/images/...
- * - If you want an ambient audio, add an <audio> element in the HTML panel and
- *   set `audioRef` to control playback (muting).
- */
 
 export default function VirtualTourExperience() {
   const navigate = useNavigate();
@@ -296,13 +283,7 @@ export default function VirtualTourExperience() {
           {isFullscreen ? <FaCompress /> : <FaExpand />}
         </button>
 
-        <button
-        onClick={() => navigate("/")}
-        className="p-2 hover:bg-white/50 rounded-md transition"
-        title="Go Home"
-      >
-        <Home size={20} />
-      </button>
+        
 
         {/* Counter */}
         <div

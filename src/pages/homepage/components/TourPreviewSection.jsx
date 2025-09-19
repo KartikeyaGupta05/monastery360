@@ -22,7 +22,6 @@ const TourPreviewSection = () => {
           {/* Preview Image/Video */}
           <div className="relative group">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
-              <Link to="/vr-360">
                 <Image
                   src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                   alt="360 degree monastery tour preview"
@@ -42,7 +41,6 @@ const TourPreviewSection = () => {
               <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full font-body font-semibold text-sm">
                 360° Tour
               </div>
-              </Link>
             </div>
           </div>
 
