@@ -18,7 +18,7 @@ const MinistryCollaboration = () => {
         "Digital Heritage Promotion",
       ],
       status: "Active Partnership",
-      established: "2024",
+      established: "2025",
       impact: "12+ monasteries digitized",
     },
     {
@@ -35,7 +35,7 @@ const MinistryCollaboration = () => {
         "Community Heritage Programs",
       ],
       status: "Active Partnership",
-      established: "2024",
+      established: "2025",
       impact: "500+ artifacts documented",
     },
     {
@@ -64,21 +64,21 @@ const MinistryCollaboration = () => {
       title: "Heritage Excellence Award",
       description:
         "Recognized by Ministry of Culture for digital preservation innovation",
-      year: "2024",
+      year: "2025",
     },
     {
       id: 2,
       icon: "Users",
       title: "15+ Monastery Partnerships",
       description: "Active collaborations across Himalayan regions",
-      year: "2024",
+      year: "2025",
     },
     {
       id: 3,
       icon: "Globe",
       title: "100K+ Virtual Visitors",
       description: "Global audience reached through digital platform",
-      year: "2024",
+      year: "225",
     },
   ];
 

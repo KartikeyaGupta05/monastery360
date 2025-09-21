@@ -578,7 +578,7 @@ const ArtisanConnectMarketplace = () => {
 
           <div className="border-t border-background/20 mt-8 pt-8 text-center">
             <p className="font-body text-sm opacity-60">
-              © {new Date()?.getFullYear()} Monastery360. Built for Smart India Hackathon 2024.
+              © {new Date()?.getFullYear()} Monastery360. Built for Smart India Hackathon 2025.
               Preserving heritage, supporting artisans.
             </p>
           </div>
