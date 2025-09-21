@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const VisionSection = () => {
   return (
@@ -10,27 +10,39 @@ const VisionSection = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
         </div>
-        
+
         <div className="space-y-6">
           <p className="font-body text-xl md:text-2xl text-foreground leading-relaxed">
-            Preserving the sacred heritage of ancient monasteries through cutting-edge technology,
+            To create a digital sanctuary where the timeless heritage of
+            monasteries is preserved and celebrated.
           </p>
           <p className="font-body text-xl md:text-2xl text-foreground leading-relaxed">
-            making spiritual wisdom accessible to seekers worldwide,
+            To blend immersive 360° virtual tours with AI-powered storytelling,
+            making culture and spirituality accessible to every corner of the
+            world.
           </p>
           <p className="font-body text-xl md:text-2xl text-foreground leading-relaxed">
-            while empowering local artisan communities to thrive in the digital age.
+            To empower artisans by connecting their handcrafted traditions with
+            global audiences, ensuring sustainability and dignity in the digital
+            age.
           </p>
           <p className="font-body text-xl md:text-2xl text-primary font-semibold leading-relaxed">
-            Where ancient wisdom meets modern innovation.
+            Our vision: a seamless fusion of tradition, innovation, and
+            community.
           </p>
         </div>
 
         {/* Decorative Elements */}
         <div className="mt-16 flex justify-center space-x-8">
           <div className="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
-          <div className="w-3 h-3 bg-primary rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-          <div className="w-3 h-3 bg-accent rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div
+            className="w-3 h-3 bg-primary rounded-full animate-pulse"
+            style={{ animationDelay: "0.5s" }}
+          ></div>
+          <div
+            className="w-3 h-3 bg-accent rounded-full animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
         </div>
       </div>
     </section>

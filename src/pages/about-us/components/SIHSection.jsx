@@ -3,62 +3,61 @@ import Icon from '../../../components/AppIcon';
 
 const SIHSection = () => {
   const problemStatements = [
-    {
-      id: 1,
-      title: "Heritage Accessibility Challenge",
-      description: "Remote monasteries in Himalayan regions are difficult to access for tourists and researchers, limiting cultural exchange and heritage appreciation.",
-      icon: "Mountain",
-      impact: "Limited global awareness of monastery heritage"
-    },
-    {
-      id: 2,
-      title: "Cultural Preservation Crisis",
-      description: "Ancient monastery art, manuscripts, and traditions are at risk of being lost without proper digital documentation and preservation methods.",
-      icon: "BookOpen",
-      impact: "Potential loss of irreplaceable cultural artifacts"
-    },
-    {
-      id: 3,
-      title: "Economic Sustainability",
-      description: "Local artisan communities around monasteries lack platforms to showcase and sell their traditional crafts to global audiences.",
-      icon: "Users",
-      impact: "Declining traditional craft practices and livelihoods"
-    },
-    {
-      id: 4,
-      title: "Educational Gap",
-      description: "Limited interactive educational resources about monastery culture, philosophy, and artistic traditions for global learners.",
-      icon: "GraduationCap",
-      impact: "Reduced cultural understanding and appreciation"
-    }
-  ];
-
+  {
+    id: 1,
+    title: "Heritage Accessibility Challenge",
+    description: "Remote monasteries in Himalayan regions are difficult to access for tourists and researchers, limiting cultural exchange and heritage appreciation.",
+    icon: "Mountain",
+    impact: "Limited global awareness of monastery heritage"
+  },
+  {
+    id: 2,
+    title: "Vanishing Cultural Heritage",
+    description: "Ancient monastery art, manuscripts, and oral traditions are at risk of being lost without proper digital documentation and preservation methods.",
+    icon: "BookOpen",
+    impact: "Potential loss of irreplaceable cultural artifacts"
+  },
+  {
+    id: 3,
+    title: "Economic Sustainability Gap",
+    description: "Local artisan communities around monasteries lack direct platforms to showcase their traditional crafts and achieve financial independence.",
+    icon: "Users",
+    impact: "Declining traditional craft practices and livelihoods"
+  },
+  {
+    id: 4,
+    title: "Superficial Tourist Engagement",
+    description: "Visitors often lack the tools for a deep, interactive educational experience, missing the rich philosophy and stories behind the art.",
+    icon: "GraduationCap",
+    impact: "Reduced cultural understanding and appreciation"
+  }
+];
   const solutionApproach = [
-    {
-      id: 1,
-      title: "360° Virtual Tours",
-      description: "Immersive VR experiences that allow users to explore monastery interiors, courtyards, and sacred spaces from anywhere in the world.",
-      technology: "React 360, Three.js, WebXR"
-    },
-    {
-      id: 2,
-      title: "AI Cultural Storytelling",
-      description: "Interactive AI system that explains cultural symbols, artwork meanings, and historical context through engaging visual interfaces.",
-      technology: "Computer Vision, NLP, React"
-    },
-    {
-      id: 3,
-      title: "Artisan Marketplace",
-      description: "Digital platform connecting monastery-linked artisans with global customers, featuring authentic crafts and their cultural stories.",
-      technology: "E-commerce Integration, Payment Gateway"
-    },
-    {
-      id: 4,
-      title: "Heritage Documentation",
-      description: "Comprehensive digital archive of monastery artifacts, manuscripts, and traditions with searchable metadata and cultural context.",
-      technology: "Database Design, Content Management"
-    }
-  ];
+  {
+    id: 1,
+    title: "360° Immersive Sanctuaries",
+    description: "Stunning, high-fidelity virtual tours that allow users to step inside monastery interiors, courtyards, and sacred spaces from anywhere in the world.",
+    technology: "A-Frame, WebXR, React"
+  },
+  {
+    id: 2,
+    title: "Mandala AI: Intelligent Discovery",
+    description: "Our unique AI guide that reveals the hidden connections between art, symbols, and philosophies across all monasteries, transforming a tour into a deep learning journey.",
+    technology: "Computer Vision, NLP, Knowledge Graph"
+  },
+  {
+    id: 3,
+    title: "Artisan Connect Marketplace",
+    description: "A dedicated digital marketplace that creates a direct bridge between local artisans and a global audience, fostering sustainable livelihoods.",
+    technology: "E-commerce APIs, Stripe/Razorpay"
+  },
+  {
+    id: 4,
+    title: "Interactive Map & Smart Guide",
+    description: "A geo-aware smart guide for on-site and remote planning, featuring offline maps, location-based stories, and a cultural events calendar.",
+    technology: "Geolocation APIs, Mobile Development"
+  }
+];
 
   return (
     <section className="py-16 bg-background">
@@ -67,7 +66,7 @@ const SIHSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-6 py-2 mb-6">
             <Icon name="Award" size={20} className="text-primary" />
-            <span className="font-body font-medium text-primary">Smart India Hackathon 2024</span>
+            <span className="font-body font-medium text-primary">Smart India Hackathon 2025</span>
           </div>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
             Problem Statement & Solution

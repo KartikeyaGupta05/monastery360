@@ -117,7 +117,7 @@ const MinistryCollaborationSection = () => {
           <div className="flex items-center justify-center space-x-4 mb-4">
             <Icon name="Trophy" size={32} className="text-white" />
             <h3 className="font-heading text-2xl font-bold text-white">
-              Smart India Hackathon 2024
+              Smart India Hackathon 2025
             </h3>
           </div>
           <p className="font-body text-white/90 text-lg max-w-2xl mx-auto">

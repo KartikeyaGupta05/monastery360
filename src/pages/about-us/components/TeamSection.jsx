@@ -10,9 +10,8 @@ const TeamSection = () => {
       role: "Team Lead & Full Stack Developer",
       expertise: "React, Node.js, DataBase and Cloud",
       image: "/assets/images/Kartikeya.jpg",
-      connection: "Passionate about preserving Himalayan monastery heritage through technology",
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/kartikeyagupta05/",
+      github: "https://github.com/kartikeyagupta05"
     },
     {
       id: 2,
@@ -20,9 +19,8 @@ const TeamSection = () => {
       role: "UI/UX Designer & Frontend Developer",
       expertise: "Design Systems, React, Cultural Aesthetics",
       image: "/assets/images/om.jpg",
-      connection: "Specializes in creating intuitive interfaces that honor traditional monastery aesthetics",
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/omshukla350/",
+      github: "https://github.com/OmShukla350"
     },
     {
       id: 3,
@@ -30,9 +28,8 @@ const TeamSection = () => {
       role: "Backend Developer & DevOps",
       expertise: "Monastery History, Cultural Preservation",
       image: "/assets/images/rahul.jpg",
-      connection: "Born in Ladakh, dedicated to preserving authentic monastery traditions and stories",
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/rahu-ul/",
+      github: "https://github.com/rahu-ul"
     },
     {
       id: 4,
@@ -40,9 +37,8 @@ const TeamSection = () => {
       role: "AI/ML Engineer",
       expertise: "Computer Vision, NLP, Cultural AI",
       image: "/assets/images/mridul.jpg",
-      connection: "Develops AI systems that understand and interpret monastery art and cultural symbols",
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/mridul-goyal-7221581b3/",
+      github: "https://github.com/Mridultech"
     },
     {
       id: 5,
@@ -50,9 +46,8 @@ const TeamSection = () => {
       role: "Cultural Researcher & Cloud Engineer",
       expertise: "Cloud Architecture, Database Design",
       image: "/assets/images/yash.jpg",
-      connection: "Ensures scalable infrastructure to serve heritage content to global audiences",
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/yash-khandelwal-26a5012a9",
+      github: "https://github.com/YashKhandelwal82"
     },
     {
       id: 6,
@@ -60,9 +55,8 @@ const TeamSection = () => {
       role: "VR/AR Developer",
       expertise: "Three.js, WebXR, Immersive Experiences",
       image: "/assets/images/vaishnavi.jpeg",
-      connection: "Creates immersive virtual experiences that transport users into monastery environments",
-      linkedin: "#",
-      github: "#"
+      linkedin: "http://www.linkedin.com/in/vaishnavi-cse28",
+      github: "https://github.com/2006vaishnaviglb-beep"
     }
   ];
 
@@ -103,9 +97,9 @@ const TeamSection = () => {
               <p className="font-caption text-sm text-muted-foreground mb-4">
                 {member?.expertise}
               </p>
-              <p className="font-body text-sm text-card-foreground mb-6 leading-relaxed">
+              {/* <p className="font-body text-sm text-card-foreground mb-6 leading-relaxed">
                 {member?.connection}
-              </p>
+              </p> */}
 
               <div className="flex justify-center space-x-4">
                 <a

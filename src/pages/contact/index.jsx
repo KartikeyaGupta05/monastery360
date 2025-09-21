@@ -169,7 +169,7 @@ const Contact = () => {
                   local artisan communities worldwide.
                 </p>
                 <p className="text-background/60 text-sm">
-                  © {new Date()?.getFullYear()} Monastery360. Built for Smart India Hackathon 2024.
+                  © {new Date()?.getFullYear()} Monastery360. Built for Smart India Hackathon 2025.
                 </p>
               </div>
 

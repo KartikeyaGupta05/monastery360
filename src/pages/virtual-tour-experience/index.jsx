@@ -13,7 +13,6 @@ import {
   FaVolumeUp,
   FaVolumeMute,
 } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 import Header from "components/ui/Header";
 import HelpOverlay from "./components/HelpOverlay";
 
@@ -23,6 +22,7 @@ export default function VirtualTourExperience() {
     "/assets/images/image6.png",
     "/assets/images/image3.png",
     "/assets/images/image5.png",
+    "/assets/images/image4.png",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

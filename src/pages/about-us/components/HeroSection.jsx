@@ -25,7 +25,7 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
-            <span className="font-body text-white font-medium">Founded: 2024</span>
+            <span className="font-body text-white font-medium">Founded: 2025</span>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
             <span className="font-body text-white font-medium">Team: 6 Members</span>

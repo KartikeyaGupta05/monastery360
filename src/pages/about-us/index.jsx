@@ -58,7 +58,7 @@ const AboutUs = () => {
                 Preserving monastery heritage through innovative technology, connecting cultures, and supporting artisan communities worldwide.
               </p>
               <p className="font-caption text-xs opacity-60">
-                © {new Date()?.getFullYear()} Monastery360. Built for Smart India Hackathon 2024.
+                © {new Date()?.getFullYear()} Monastery360. Built for Smart India Hackathon 2025.
               </p>
             </div>
             
