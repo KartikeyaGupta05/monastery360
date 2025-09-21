@@ -9,7 +9,7 @@ const PartnershipsSection = () => {
       name: "Rumtek Monastery",
       location: "Sikkim, India",
       description: "One of the largest and most significant monasteries in Sikkim, known for its golden stupa, rare manuscripts, and the annual Kagyu festival.",
-      image: "../public/assets/images/rumtek.png",
+      image: "/assets/images/rumtek.png",
       partnership: "Digital documentation and virtual tour development"
     },
     {
@@ -17,7 +17,7 @@ const PartnershipsSection = () => {
       name: "Dubdi Monastery",
       location: "Sikkim, India",
       description: "The oldest monastery in Sikkim, known for its historic significance, serene setting, and association with the founding of the kingdom.",
-      image: "../public/assets/images/Dubdi.png",
+      image: "/assets/images/Dubdi.png",
       partnership: "Cultural artifact preservation and AI storytelling integration"
     },
     {
@@ -25,7 +25,7 @@ const PartnershipsSection = () => {
       name: "Phodong Monastery",
       location: "Sikkim, India",
       description: "One of the most important monasteries in North Sikkim, known for its vibrant murals, annual Cham dance festival, and Kagyu lineage.",
-      image: "../public/assets/images/Phodong.png",
+      image: "/assets/images/Phodong.png",
       partnership: "Remote accessibility solutions and virtual pilgrimage experiences"
     }
   ];
