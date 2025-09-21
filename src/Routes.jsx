@@ -9,6 +9,7 @@ import InteractiveMandalaAI from './pages/interactive-mandala-ai';
 import VirtualTourExperience from './pages/virtual-tour-experience';
 import AboutUs from './pages/about-us';
 import Homepage from './pages/homepage';
+import Events from './pages/cultural-events-festivals/Events';
 
 const Routes = () => {
   return (
@@ -23,6 +24,7 @@ const Routes = () => {
         <Route path="/interactive-mandala-ai" element={<InteractiveMandalaAI />} />
         <Route path="/virtual-tour-experience" element={<VirtualTourExperience />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
