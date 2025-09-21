@@ -34,7 +34,7 @@ const Contact = () => {
             </div>
 
             {/* Quick Contact Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-6 bg-card rounded-lg spiritual-shadow">
                 <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Icon name="Clock" size={20} className="text-success" />
@@ -92,9 +92,9 @@ const Contact = () => {
         </section>
 
         {/* Ministry Collaboration Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6">
               <h2 className="font-heading text-3xl font-bold text-foreground mb-4">
                 Official Partnerships
               </h2>
@@ -112,13 +112,13 @@ const Contact = () => {
         <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <div className="bg-card rounded-2xl p-8 spiritual-shadow">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                 <Icon name="Heart" size={32} className="text-primary" />
               </div>
               <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
                 Join Our Heritage Preservation Mission
               </h2>
-              <p className="font-body text-muted-foreground mb-6 max-w-2xl mx-auto">
+              <p className="font-body text-muted-foreground mb-6 max-w-3xl text-lg mx-auto">
                 Whether you're a monastery, cultural institution, technology partner, or heritage enthusiast, 
                 we invite you to be part of our journey to preserve and share the world's monastery heritage 
                 for future generations.
