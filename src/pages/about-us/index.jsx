@@ -8,6 +8,7 @@ import VisionSection from './components/VisionSection';
 import PartnershipsSection from './components/PartnershipsSection';
 import TechnicalSection from './components/TechnicalSection';
 import ContactSection from './components/ContactSection';
+import OurFeatures from './components/OurFeatures';
 
 const AboutUs = () => {
   return (
@@ -29,6 +30,7 @@ const AboutUs = () => {
         <HeroSection />
         <TeamSection />
         <SIHSection />
+        <OurFeatures />
         <VisionSection />
         <PartnershipsSection />
         <TechnicalSection />

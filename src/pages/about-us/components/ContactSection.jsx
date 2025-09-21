@@ -88,9 +88,9 @@ const ContactSection = () => {
     },
     {
       id: 2,
-      city: "Leh",
-      country: "Ladakh",
-      address: "Heritage Center, Main Bazaar\nLeh 194101, Ladakh",
+      city: "Gangtok",
+      country: "India",
+      address: "Heritage Center, Main Bazaar\nLeh 194101, Gangtok, India",
       role: "Cultural Research & Monastery Liaison",
       icon: "Mountain"
     },

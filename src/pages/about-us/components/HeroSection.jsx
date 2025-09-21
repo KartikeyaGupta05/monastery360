@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">
           Preserving Heritage,
-          <span className="block text-secondary">Connecting Cultures</span>
+          <span className="block text-primary">Connecting Cultures</span>
         </h1>
         <p className="font-body text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
           We are a passionate team of developers, heritage enthusiasts, and cultural preservationists dedicated to making monastery heritage accessible to the world through innovative technology.
