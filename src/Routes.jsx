@@ -9,6 +9,7 @@ import InteractiveMandalaAI from './pages/interactive-mandala-ai';
 import VirtualTourExperience from './pages/virtual-tour-experience';
 import AboutUs from './pages/about-us';
 import Homepage from './pages/homepage';
+import Events from "./pages/cultural-events-festivals/Events";
 import VR_360 from './pages/VR_360';
 
 const Routes = () => {
@@ -25,6 +26,7 @@ const Routes = () => {
         <Route path="/virtual-tour-experience" element={<VirtualTourExperience />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/vr-360" element={<VR_360 />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>

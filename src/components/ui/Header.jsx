@@ -29,6 +29,7 @@ const Header = () => {
       ]
     },
     { label: 'Artisan Connect', path: '/artisan-connect-marketplace', icon: 'ShoppingBag' },
+    {label: 'Events', path: '/events', icon: 'Calendar' },
     { label: 'About', path: '/about-us', icon: 'Users' },
     { label: 'Contact', path: '/contact', icon: 'MessageCircle' }
   ];
