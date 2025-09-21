@@ -152,10 +152,48 @@ const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation (No changes needed here) */}
+        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-background border-t border-border">
-            {/* ... your existing mobile nav code ... */}
+            <nav className="px-6 py-4 space-y-2">
+              {navigationItems?.map((item) => (
+                <div key={item?.path}>
+                  <Link
+                    to={item?.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg font-body font-medium transition-colors duration-200 ${
+                      isActiveRoute(item?.path) || isActiveParent(item)
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-foreground hover:bg-muted'
+                    }`}
+                  >
+                    <Icon name={item?.icon} size={18} />
+                    <span>{item?.label}</span>
+                  </Link>
+                  
+                  {/* Mobile Submenu */}
+                  {item?.submenu && (
+                    <div className="ml-6 mt-2 space-y-1">
+                      {item?.submenu?.map((subItem) => (
+                        <Link
+                          key={subItem?.path}
+                          to={subItem?.path}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={`flex items-center space-x-3 px-4 py-2 rounded-md font-body text-sm transition-colors duration-200 ${
+                            isActiveRoute(subItem?.path)
+                              ? 'bg-accent text-accent-foreground'
+                              : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                          }`}
+                        >
+                          <Icon name={subItem?.icon} size={16} />
+                          <span>{subItem?.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
           </div>
         )}
       </div>

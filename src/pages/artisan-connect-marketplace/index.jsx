@@ -8,6 +8,10 @@ import SortControls from './components/SortControls';
 import ArtisanCard from './components/ArtisanCard';
 import QuickViewModal from './components/QuickViewModal';
 import ArtisanProfileModal from './components/ArtisanProfileModal';
+import FloatingCartIcon from './components/FloatingCartIcon';
+import CartPanel from './components/CartPanel';
+import { image } from 'd3';
+
 
 const ArtisanConnectMarketplace = () => {
   const [filters, setFilters] = useState({
@@ -24,178 +28,218 @@ const ArtisanConnectMarketplace = () => {
   const [selectedArtisan, setSelectedArtisan] = useState(null);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+
+  // --- CART STATE AND LOGIC UPDATES ---
   const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false); // NEW: State for cart panel visibility
 
   // Mock artisan data
   const mockArtisans = [
     {
       id: 1,
-      name: "Sacred Thangka - Medicine Buddha",
-      artisanName: "Tenzin Norbu",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
-      profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-      location: "Ladakh, India",
-      price: 2500,
-      rating: 4.9,
-      reviews: 47,
-      totalProducts: 18,
-      description: "Hand-painted traditional Thangka depicting Medicine Buddha, created using ancient techniques passed down through generations. Made with natural pigments and gold leaf on cotton canvas.",
-      story: "Crafted by master artist Tenzin Norbu, who learned this sacred art from his grandfather at Hemis Monastery.",
-      fullStory: `Tenzin Norbu was born in the ancient village of Hemis, where the sound of prayer wheels and chanting monks formed the soundtrack of his childhood. At the age of seven, he began learning the sacred art of Thangka painting from his grandfather, Lama Sonam, a renowned master who had spent decades perfecting this divine craft.\n\nEach brushstroke in Tenzin's work carries the weight of centuries-old tradition. He spends months on a single piece, beginning each day with meditation and prayers, ensuring that every detail reflects the spiritual essence of the subject. His Medicine Buddha Thangkas are particularly revered for their healing energy and precise iconographic details.\n\nThrough his art, Tenzin supports the Hemis Monastery's restoration projects and provides for his family while keeping this precious tradition alive for future generations.`,
+      name: "Sacred Thangka - Chenrezig (Avalokiteshvara)",
+      artisanName: "Pema Dorjee",
+      image: "/assets/images/Aimg3.jpg",
+      profileImage: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      location: "Gangtok, Sikkim",
+      price: 3200,
+      rating: 4.8,
+      reviews: 39,
+      totalProducts: 22,
+      description: "Hand-painted Thangka of Chenrezig (Avalokiteshvara), the Bodhisattva of Compassion. Created using mineral pigments and 24k gold on cotton canvas, representing the deep spiritual traditions of Sikkim.",
+      story: "Crafted by artisan Pema Dorjee, who learned the sacred art of Thangka from monks at Enchey Monastery in Sikkim.",
+      fullStory: `Born in the hills of Gangtok, Pema Dorjee grew up surrounded by the chants and rituals of nearby monasteries. At fifteen, he began training under a Thangka master at Enchey Monastery, where he studied iconography, sacred geometry, and the spiritual symbolism embedded in each painting.\n\nEach of Pema’s Thangkas is a meditative journey—he begins his day with prayers, then carefully grinds natural stones and herbs to create pigments. The use of 24k gold leaf highlights the divine presence in his work. His Chenrezig paintings are especially revered, symbolizing infinite compassion and blessings.\n\nThrough his craft, Pema supports young apprentices in Sikkim and donates a portion of his earnings to local monastery schools, ensuring the tradition continues to flourish in the Himalayas.`,
       specialty: "Thangka Painting",
-      experience: 25,
-      monastery: "Hemis Monastery",
-      orders: 234,
+      experience: 18,
+      monastery: "Enchey Monastery",
+      orders: 187,
       verified: true,
       monasteryEndorsed: true,
       inStock: true,
       craftType: 'thangka',
       gallery: [
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400",
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400"
+        "/assets/images/Aimg3.jpg",
+        "https://images.unsplash.com/photo-1584277260435-9a3e0b7f5e2a?w=400",
+        "https://images.unsplash.com/photo-1602143470302-7d64d8a0e7b4?w=400"
       ]
     },
     {
       id: 2,
-      name: "Himalayan Singing Bowl Set",
-      artisanName: "Karma Dolma",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400",
-      profileImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150",
-      location: "Sikkim, India",
-      price: 1200,
-      rating: 4.8,
-      reviews: 89,
-      totalProducts: 32,
-      description: "Handcrafted singing bowls made from seven sacred metals, producing pure healing tones for meditation and sound therapy. Each bowl is individually tuned and blessed.",
-      story: "Created by Karma Dolma, a third-generation metalworker who specializes in traditional Tibetan instruments.",
-      specialty: "Metal Crafts & Instruments",
-      experience: 18,
-      verified: true,
-      monasteryEndorsed: false,
-      inStock: true,
-      craftType: 'singing-bowls'
-    },
-    {
-      id: 3,
-      name: "Prayer Flags - Wind Horse Collection",
-      artisanName: "Lobsang Tashi",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
-      profileImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150",
-      location: "Himachal Pradesh, India",
-      price: 450,
-      rating: 4.7,
-      reviews: 156,
-      totalProducts: 45,
-      description: "Traditional cotton prayer flags printed with sacred mantras and symbols. Each set includes 25 flags in the five traditional colors representing the elements.",
-      story: "Hand-printed by Lobsang Tashi using traditional woodblock techniques in the foothills of the Himalayas.",
-      specialty: "Textile Arts & Printing",
-      experience: 12,
-      verified: true,
-      monasteryEndorsed: true,
-      inStock: true,
-      craftType: 'prayer-flags'
-    },
-    {
-      id: 4,
-      name: "Sacred Incense - Monastery Blend",
-      artisanName: "Pema Chodon",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400",
-      profileImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
-      location: "Nepal",
-      price: 180,
+      name: "Handwoven Tibetan Carpet - Dragon Motif",
+      artisanName: "Sonam Choden",
+      image: "/assets/images/A img1.jpg",
+      profileImage: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      location: "Gangtok, Sikkim",
+      price: 4800,
       rating: 4.9,
-      reviews: 203,
-      totalProducts: 28,
-      description: "Premium incense sticks made from pure Himalayan herbs and resins. This monastery blend includes juniper, sandalwood, and rare medicinal plants for purification and meditation.",
-      story: "Crafted by Pema Chodon using recipes passed down from Tibetan monasteries, each batch is blessed before packaging.",
-      specialty: "Herbal Incense & Aromatics",
-      experience: 15,
-      verified: true,
-      monasteryEndorsed: true,
-      inStock: true,
-      craftType: 'incense'
-    },
-    {
-      id: 5,
-      name: "Turquoise Mala Beads - 108 Count",
-      artisanName: "Thukten Rinchen",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
-      profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-      location: "Tibet Region",
-      price: 890,
-      rating: 4.8,
-      reviews: 67,
-      totalProducts: 22,
-      description: "Authentic Tibetan turquoise mala with 108 beads for meditation and prayer. Each bead is carefully selected and blessed, featuring traditional spacer beads and guru bead.",
-      story: "Handcrafted by Thukten Rinchen, who sources authentic turquoise from traditional Tibetan mines.",
-      specialty: "Spiritual Jewelry",
-      experience: 20,
-      verified: true,
-      monasteryEndorsed: false,
-      inStock: false,
-      craftType: 'jewelry'
-    },
-    {
-      id: 6,
-      name: "Buddhist Manuscript - Heart Sutra",
-      artisanName: "Geshe Tenzin",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400",
-      profileImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150",
-      location: "Bhutan",
-      price: 3200,
-      rating: 5.0,
-      reviews: 12,
-      totalProducts: 8,
-      description: "Hand-written Heart Sutra in traditional Tibetan script on handmade paper. Illuminated with gold ink and traditional decorative borders, perfect for study and meditation.",
-      story: "Calligraphed by Geshe Tenzin, a scholar monk with 30 years of experience in traditional Tibetan writing.",
-      specialty: "Sacred Calligraphy",
-      experience: 30,
-      verified: true,
-      monasteryEndorsed: true,
-      inStock: true,
-      craftType: 'manuscripts'
-    },
-    {
-      id: 7,
-      name: "Copper Buddha Statue - Meditation Pose",
-      artisanName: "Jamyang Norbu",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
-      profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-      location: "Ladakh, India",
-      price: 4500,
-      rating: 4.9,
-      reviews: 34,
-      totalProducts: 15,
-      description: "Handcrafted copper Buddha statue in meditation pose, featuring intricate details and traditional proportions. Finished with protective coating and blessed by monastery lamas.",
-      story: "Sculpted by master craftsman Jamyang Norbu, whose family has been creating sacred statues for five generations.",
-      specialty: "Metal Sculpture",
+      reviews: 52,
+      totalProducts: 27,
+      description: "Traditional Tibetan-style carpet handwoven with pure wool, featuring a vibrant dragon motif symbolizing strength and protection. Dyed with natural colors and crafted on traditional looms.",
+      story: "Woven by Sonam Choden, a master weaver from Gangtok, who has been preserving the age-old Tibetan carpet weaving tradition for over two decades.",
+      specialty: "Handwoven Carpets",
       experience: 22,
       verified: true,
       monasteryEndorsed: true,
       inStock: true,
-      craftType: 'sculptures'
+      craftType: 'handwoven-carpets',
+      gallery: [
+        "/assets/images/A img1.jpg",
+        "https://images.unsplash.com/photo-1602526216513-b2f8c9a3e6a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1602144094701-4b0c55c37a93?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
-      id: 8,
-      name: "Yak Wool Meditation Shawl",
-      artisanName: "Dolkar Lhamo",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
-      profileImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150",
-      location: "Sikkim, India",
-      price: 1800,
-      rating: 4.7,
-      reviews: 78,
-      totalProducts: 26,
-      description: "Luxurious meditation shawl woven from pure yak wool, naturally dyed with traditional colors. Soft, warm, and perfect for meditation practice in any climate.",
-      story: "Woven by Dolkar Lhamo using traditional backstrap looms, each shawl takes weeks to complete.",
-      specialty: "Traditional Weaving",
-      experience: 16,
-      verified: false,
+      id: 3,
+      name: "Lepcha Handwoven Shawl - Traditional Pattern",
+      artisanName: "Meyden Lepcha",
+      image: "/assets/images/Aimg5.jpg",
+      profileImage: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      location: "Dzongu, Sikkim",
+      price: 2200,
+      rating: 4.8,
+      reviews: 64,
+      totalProducts: 19,
+      description: "Handwoven Lepcha shawl made with organic cotton and dyed with natural plant-based colors. Features traditional geometric patterns unique to the Lepcha tribe.",
+      story: "Woven by Meyden Lepcha from Dzongu, a region considered the holy land of the Lepcha community. She learned weaving from her mother and now trains young women to preserve this cultural craft.",
+      specialty: "Lepcha Weaving",
+      experience: 15,
+      verified: true,
       monasteryEndorsed: false,
       inStock: true,
-      craftType: 'textiles'
-    }
+      craftType: 'lepcha-weaves',
+      gallery: [
+        "/assets/images/Aimg5.jpg",
+        "https://images.unsplash.com/photo-1582582628533-2e36fcff7bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1602143925094-20f6d9d8d8b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ]
+    },
+    {
+      id: 4,
+      name: "Temi Organic Tea - First Flush",
+      artisanName: "Temi Tea Estate Cooperative",
+      image: "/assets/images/Aimg6.jpg",
+      profileImage: "https://images.unsplash.com/photo-1590080875832-13a3d95cdb3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      location: "Temi, South Sikkim",
+      price: 650,
+      rating: 4.9,
+      reviews: 317,
+      totalProducts: 54,
+      description: "Finest first flush organic black tea from the iconic Temi Tea Estate in South Sikkim. Known for its delicate aroma, golden liquor, and smooth floral taste.",
+      story: "Produced by the Temi Tea Estate, established in 1969, which continues to employ traditional organic farming methods in the pristine Himalayan slopes of Sikkim.",
+      specialty: "Organic Tea",
+      experience: 55,
+      verified: true,
+      monasteryEndorsed: false,
+      inStock: true,
+      craftType: 'temi-tea',
+      gallery: [
+        "/assets/images/Aimg6.jpg",
+        "https://images.unsplash.com/photo-1600508774502-0e1bb529d590?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1576169219533-bd9bcb0f0c7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ]
+    },
+   {
+  id: 5,
+  name: "Choktse Folding Table - Handcrafted Design",
+  artisanName: "Tashi Bhutia",
+  image: "/assets/images/Aimg8.jpg",
+  profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+  location: "Gangtok, Sikkim",
+  price: 5200,
+  rating: 4.9,
+  reviews: 38,
+  totalProducts: 12,
+  description: "Traditional Choktse folding table, hand-carved from solid Himalayan wood. Features intricate designs and vibrant motifs, perfect for ceremonial or decorative use.",
+  story: "Crafted by Tashi Bhutia, a master woodworker from Gangtok, preserving the centuries-old Sikkimese tradition of Choktse furniture making.",
+  specialty: "Wood Carving & Furniture",
+  experience: 25,
+  verified: true,
+  monasteryEndorsed: true,
+  inStock: true,
+  craftType: 'choktse-tables',
+  gallery: [
+    "/assets/images/Aimg8.jpg",
+    "https://images.unsplash.com/photo-1602524918303-5d28e5d9c2c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    "https://images.unsplash.com/photo-1602524956102-3f8b9a9f22e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+  ]
+}
+,
+    {
+      id: 6,
+      name: "Traditional Sikkimese Jewellery - Coral & Turquoise Necklace",
+      artisanName: "Namgyal Bhutia",
+      image:"/assets/images/Aimg4.jpg",
+      profileImage: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      location: "Gangtok, Sikkim",
+      price: 2800,
+      rating: 4.9,
+      reviews: 41,
+      totalProducts: 14,
+      description: "Handcrafted traditional Sikkimese necklace made with coral, turquoise, silver, and amber beads. Worn during festivals and special ceremonies for prosperity and protection.",
+      story: "Created by Namgyal Bhutia, a skilled jeweller from Gangtok who continues his family’s legacy of designing ornaments inspired by Tibetan and Lepcha traditions.",
+      specialty: "Traditional Jewellery",
+      experience: 20,
+      verified: true,
+      monasteryEndorsed: false,
+      inStock: true,
+      craftType: 'traditional-jewellery',
+      gallery: [
+        "/assets/images/Aimg4.jpg",
+        "https://images.unsplash.com/photo-1605025183246-42b9a8b9d06b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1602144051823-9a80c7c1f16f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ]
+    },
+    {
+      id: 7,
+      name: "Handwoven Bamboo & Cane Basket - Utility Design",
+      artisanName: "Phurba Tamang",
+      image: "/assets/images/Aimg7.jpg",
+      profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      location: "Namchi, Sikkim",
+      price: 850,
+      rating: 4.8,
+      reviews: 76,
+      totalProducts: 24,
+      description: "Eco-friendly handwoven basket made from locally sourced bamboo and cane. Strong, lightweight, and versatile—used for carrying vegetables, grains, or as a decorative storage piece.",
+      story: "Crafted by Phurba Tamang, a bamboo artisan from Namchi, who has dedicated his life to keeping the tradition of bamboo weaving alive in his community.",
+      specialty: "Bamboo & Cane Craft",
+      experience: 16,
+      verified: true,
+      monasteryEndorsed: false,
+      inStock: true,
+      craftType: 'bamboo-cane',
+      gallery: [
+        "/assets/images/Aimg7.jpg",
+        "https://images.unsplash.com/photo-1602144123459-f2b3c718e541?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1602524907824-7e54b01d3a9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ]
+    },
+    {
+  id: 9,
+  name: "Traditional Wooden Mask",
+  artisanName: "Pema Dorjee",
+  image: "/assets/images/Aimg2.jpg",
+  profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150",
+  location: "Sikkim, India",
+  price: 2500,
+  rating: 4.6,
+  reviews: 41,
+  totalProducts: 18,
+  description: "Hand-carved wooden mask used in traditional Sikkimese festivals and Cham dances. Crafted from sustainably sourced wood and painted with natural colors.",
+  story: "Carved by Pema Dorjee, who belongs to a lineage of artisans preserving sacred mask-making traditions for generations.",
+  specialty: "Wood Carving",
+  experience: 20,
+  verified: true,
+  monasteryEndorsed: true,
+  inStock: true,
+  craftType: 'woodwork', 
+   gallery: [
+        "/assets/images/Aimg2.jpg",
+        "https://images.unsplash.com/photo-1602144123459-f2b3c718e541?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1602524907824-7e54b01d3a9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ]
+}
+
   ];
 
   // Filter and sort artisans
@@ -205,7 +249,7 @@ const ArtisanConnectMarketplace = () => {
     if (filters?.verified && !artisan?.verified) return false;
     if (filters?.monasteryEndorsed && !artisan?.monasteryEndorsed) return false;
     if (filters?.inStock && !artisan?.inStock) return false;
-    
+
     if (filters?.priceRange !== 'all') {
       const [min, max] = filters?.priceRange?.split('-')?.map(p => p?.replace('+', ''));
       if (max) {
@@ -214,7 +258,7 @@ const ArtisanConnectMarketplace = () => {
         if (artisan?.price < parseInt(min)) return false;
       }
     }
-    
+
     return true;
   });
 
@@ -247,10 +291,46 @@ const ArtisanConnectMarketplace = () => {
     setIsProfileModalOpen(true);
   };
 
+  // --- UPDATED CART MANAGEMENT FUNCTIONS ---
+
   const handleAddToCart = (item) => {
-    setCartItems(prev => [...prev, { ...item, addedAt: new Date() }]);
-    // Show success message or notification here
+    setCartItems(prev => {
+      const existingItem = prev.find(cartItem => cartItem.id === item.id);
+      if (existingItem) {
+        // If item exists, update its quantity
+        return prev.map(cartItem =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        );
+      } else {
+        // If item doesn't exist, add it with quantity 1
+        return [...prev, { ...item, quantity: 1, addedAt: new Date() }];
+      }
+    });
   };
+
+  const handleRemoveItem = (itemId) => {
+    setCartItems(prev => prev.filter(item => item.id !== itemId));
+  };
+
+  const handleUpdateQuantity = (itemId, newQuantity) => {
+    if (newQuantity <= 0) {
+      handleRemoveItem(itemId);
+    } else {
+      setCartItems(prev =>
+        prev.map(item =>
+          item.id === itemId ? { ...item, quantity: newQuantity } : item
+        )
+      );
+    }
+  };
+
+  const handleToggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+  // --- END OF CART UPDATES ---
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -272,11 +352,11 @@ const ArtisanConnectMarketplace = () => {
               Artisan Connect Marketplace
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-              Discover authentic monastery-linked artisan products while supporting local craftspeople 
-              and cultural preservation. Each purchase helps preserve ancient traditions and supports 
+              Discover authentic monastery-linked artisan products while supporting local craftspeople
+              and cultural preservation. Each purchase helps preserve ancient traditions and supports
               artisan communities across the Himalayas.
             </p>
-            
+
             {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center space-x-2">
@@ -331,7 +411,7 @@ const ArtisanConnectMarketplace = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.4 }}
                   className={
-                    viewMode === 'grid' ?'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6' :'space-y-6'
+                    viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6' : 'space-y-6'
                   }
                 >
                   {sortedArtisans?.map((artisan, index) => (
@@ -346,6 +426,8 @@ const ArtisanConnectMarketplace = () => {
                         onQuickView={handleQuickView}
                         onAddToCart={handleAddToCart}
                         viewMode={viewMode}
+                        // NEW: Pass handleArtisanProfile to the card
+                        onViewProfile={handleArtisanProfile}
                       />
                     </motion.div>
                   ))}
@@ -392,8 +474,8 @@ const ArtisanConnectMarketplace = () => {
               Every Purchase Preserves Heritage
             </h2>
             <p className="font-body text-lg text-muted-foreground mb-8">
-              When you buy from our artisan marketplace, you're not just acquiring beautiful crafts – 
-              you're supporting families, preserving ancient techniques, and helping monasteries 
+              When you buy from our artisan marketplace, you're not just acquiring beautiful crafts –
+              you're supporting families, preserving ancient techniques, and helping monasteries
               continue their cultural preservation work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -417,7 +499,8 @@ const ArtisanConnectMarketplace = () => {
           </motion.div>
         </div>
       </section>
-      {/* Modals */}
+
+      {/* --- RENDER MODALS AND CART PANEL --- */}
       <QuickViewModal
         artisan={selectedArtisan}
         isOpen={isQuickViewOpen}
@@ -428,7 +511,24 @@ const ArtisanConnectMarketplace = () => {
         artisan={selectedArtisan}
         isOpen={isProfileModalOpen}
         onClose={() => setIsProfileModalOpen(false)}
+        onAddToCart={handleAddToCart} // Pass add to cart function
       />
+
+      {/* NEW: Render CartPanel */}
+      <CartPanel
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        onUpdateQuantity={handleUpdateQuantity}
+        onRemoveItem={handleRemoveItem}
+      />
+
+      {/* NEW: Connect FloatingCartIcon to toggle cart */}
+      <FloatingCartIcon
+        cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)}
+        onClick={handleToggleCart}
+      />
+
       {/* Footer */}
       <footer className="bg-foreground text-background py-12">
         <div className="max-w-7xl mx-auto px-6">
@@ -444,7 +544,7 @@ const ArtisanConnectMarketplace = () => {
                 <Icon name="Instagram" size={20} className="opacity-60 hover:opacity-100 cursor-pointer" />
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-body font-medium mb-4">Marketplace</h4>
               <ul className="space-y-2 text-sm opacity-80">
@@ -454,7 +554,7 @@ const ArtisanConnectMarketplace = () => {
                 <li>Sacred Incense</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-body font-medium mb-4">Support</h4>
               <ul className="space-y-2 text-sm opacity-80">
@@ -464,7 +564,7 @@ const ArtisanConnectMarketplace = () => {
                 <li>Customer Service</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-body font-medium mb-4">Heritage</h4>
               <ul className="space-y-2 text-sm opacity-80">
@@ -475,10 +575,10 @@ const ArtisanConnectMarketplace = () => {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-background/20 mt-8 pt-8 text-center">
             <p className="font-body text-sm opacity-60">
-              © {new Date()?.getFullYear()} Monastery360. Built for Smart India Hackathon 2024. 
+              © {new Date()?.getFullYear()} Monastery360. Built for Smart India Hackathon 2024.
               Preserving heritage, supporting artisans.
             </p>
           </div>
