@@ -65,7 +65,7 @@ const TechnicalSection = () => {
   ];
 
   const techStack = [
-    { category: "Frontend", technologies: ["React 18", "Tailwind CSS", "Framer Motion", "Three.js"] },
+    { category: "Frontend", technologies: ["React 18", "Tailwind CSS", "Framer Motion", "Three.js"],images:[""] },
     { category: "VR/AR", technologies: ["React 360", "A-Frame", "WebXR", "WebGL"] },
     { category: "AI/ML", technologies: ["TensorFlow.js", "OpenCV", "Computer Vision", "NLP"] },
     { category: "Backend", technologies: ["Node.js", "Express", "MongoDB", "Redis"] },

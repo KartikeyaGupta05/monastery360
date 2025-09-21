@@ -3,61 +3,70 @@ import Icon from '../../../components/AppIcon';
 
 const SIHSection = () => {
   const problemStatements = [
-  {
-    id: 1,
-    title: "Heritage Accessibility Challenge",
-    description: "Remote monasteries in Himalayan regions are difficult to access for tourists and researchers, limiting cultural exchange and heritage appreciation.",
-    icon: "Mountain",
-    impact: "Limited global awareness of monastery heritage"
-  },
-  {
-    id: 2,
-    title: "Vanishing Cultural Heritage",
-    description: "Ancient monastery art, manuscripts, and oral traditions are at risk of being lost without proper digital documentation and preservation methods.",
-    icon: "BookOpen",
-    impact: "Potential loss of irreplaceable cultural artifacts"
-  },
-  {
-    id: 3,
-    title: "Economic Sustainability Gap",
-    description: "Local artisan communities around monasteries lack direct platforms to showcase their traditional crafts and achieve financial independence.",
-    icon: "Users",
-    impact: "Declining traditional craft practices and livelihoods"
-  },
-  {
-    id: 4,
-    title: "Superficial Tourist Engagement",
-    description: "Visitors often lack the tools for a deep, interactive educational experience, missing the rich philosophy and stories behind the art.",
-    icon: "GraduationCap",
-    impact: "Reduced cultural understanding and appreciation"
-  }
-];
+    {
+      id: 1,
+      title: "Heritage Accessibility Challenge",
+      description:
+        "High in the Himalayas, over 200 monasteries preserve timeless scriptures, art, and wisdom. Yet their remote locations make them difficult to access, restricting tourism, cultural learning, and global exposure.",
+      icon: "Mountain",
+      impact: "Limited global awareness and access to monastery heritage"
+    },
+    {
+      id: 2,
+      title: "Vanishing Cultural Heritage",
+      description:
+        "Murals, manuscripts, oral traditions, and rituals face the threat of fading away without systematic preservation and digital documentation.",
+      icon: "BookOpen",
+      impact: "Risk of losing irreplaceable spiritual and cultural artifacts"
+    },
+    {
+      id: 3,
+      title: "Economic Sustainability Gap",
+      description:
+        "Local artisan communities near monasteries struggle to showcase and sell their crafts to the world due to lack of direct, reliable digital platforms.",
+      icon: "Users",
+      impact: "Decline in traditional crafts and limited livelihood opportunities"
+    },
+    {
+      id: 4,
+      title: "Superficial Tourist Engagement",
+      description:
+        "Tourists often experience monasteries as passive visitors without access to immersive tools that explain the deeper meaning, rituals, and philosophies.",
+      icon: "GraduationCap",
+      impact: "Reduced cultural understanding and appreciation"
+    }
+  ];
+
   const solutionApproach = [
-  {
-    id: 1,
-    title: "360° Immersive Sanctuaries",
-    description: "Stunning, high-fidelity virtual tours that allow users to step inside monastery interiors, courtyards, and sacred spaces from anywhere in the world.",
-    technology: "A-Frame, WebXR, React"
-  },
-  {
-    id: 2,
-    title: "Mandala AI: Intelligent Discovery",
-    description: "Our unique AI guide that reveals the hidden connections between art, symbols, and philosophies across all monasteries, transforming a tour into a deep learning journey.",
-    technology: "Computer Vision, NLP, Knowledge Graph"
-  },
-  {
-    id: 3,
-    title: "Artisan Connect Marketplace",
-    description: "A dedicated digital marketplace that creates a direct bridge between local artisans and a global audience, fostering sustainable livelihoods.",
-    technology: "E-commerce APIs, Stripe/Razorpay"
-  },
-  {
-    id: 4,
-    title: "Interactive Map & Smart Guide",
-    description: "A geo-aware smart guide for on-site and remote planning, featuring offline maps, location-based stories, and a cultural events calendar.",
-    technology: "Geolocation APIs, Mobile Development"
-  }
-];
+    {
+      id: 1,
+      title: "360° Immersive Sanctuaries",
+      description:
+        "Step inside monasteries, murals, and courtyards anytime, anywhere with high-fidelity virtual tours, bringing sacred spaces to life globally.",
+      technology: "A-Frame, WebXR, React"
+    },
+    {
+      id: 2,
+      title: "Mandala AI: Intelligent Discovery",
+      description:
+        "An AI-powered cultural guide that interprets manuscripts, murals, and symbols—unfolding spiritual insights and hidden connections for users.",
+      technology: "Computer Vision, NLP, Knowledge Graph"
+    },
+    {
+      id: 3,
+      title: "Artisan Connect Marketplace",
+      description:
+        "A global marketplace enabling monastery-linked artisans to sell their crafts directly, fostering sustainable livelihoods and cultural continuity.",
+      technology: "E-commerce APIs, Stripe/Razorpay"
+    },
+    {
+      id: 4,
+      title: "Interactive Map & Smart Guide",
+      description:
+        "A geo-enabled smart planner with offline maps, cultural routes, and an event calendar that keeps visitors connected to monastery festivals.",
+      technology: "Geolocation APIs, Mobile Development"
+    }
+  ];
 
   return (
     <section className="py-16 bg-background">
@@ -72,7 +81,8 @@ const SIHSection = () => {
             Problem Statement & Solution
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-4xl mx-auto mb-12">
-            Our project addresses the critical challenge of preserving and promoting monastery heritage while supporting local communities through innovative digital solutions.
+            Himalayan monasteries embody centuries of wisdom, art, and spirituality. Yet they remain hidden due to remoteness, limited accessibility, and lack of digital preservation. 
+            <strong> Monastery360 </strong> bridges this gap—making monasteries globally accessible through immersive technology, while empowering local communities and safeguarding heritage for generations to come.
           </p>
         </div>
 
