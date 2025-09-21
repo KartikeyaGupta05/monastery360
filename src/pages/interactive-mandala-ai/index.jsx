@@ -27,7 +27,7 @@ const InteractiveMandalaAI = () => {
       title: 'Green Tara Mandala',
       origin: 'Tibetan Buddhist',
       difficulty: 'beginner',
-      imageUrl: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=800&fit=crop',
+      imageUrl: '/assets/images/image5.png',
       thumbnailUrl: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop',
       description: `The Green Tara Mandala represents compassion and protection in Tibetan Buddhism.\nThis sacred artwork features intricate geometric patterns surrounding the central deity.`,
       hotspots: [
