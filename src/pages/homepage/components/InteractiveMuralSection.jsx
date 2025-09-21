@@ -52,7 +52,7 @@ const InteractiveMuralSection = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/assets/images/image5.png"
                 alt="Ancient monastery mural with interactive hotspots"
                 className="w-full h-96 md:h-[500px] object-cover"
               />
@@ -87,7 +87,7 @@ const InteractiveMuralSection = () => {
                   return (
                     <div>
                       <div className="flex items-center justify-between mb-3">
-                        <h4 className="font-heading text-lg font-bold text-foreground">
+                        <h4 className="font-heading text-lg font-bold text-yellow-400">
                           {hotspot?.title}
                         </h4>
                         <button
@@ -97,10 +97,10 @@ const InteractiveMuralSection = () => {
                           <Icon name="X" size={14} className="text-muted-foreground" />
                         </button>
                       </div>
-                      <p className="font-body text-sm text-muted-foreground mb-3">
+                      <p className="font-body text-white text-sm mb-3">
                         {hotspot?.description}
                       </p>
-                      <blockquote className="font-body text-sm text-primary italic border-l-2 border-primary pl-3">
+                      <blockquote className="font-body text-sm text-orange-300 italic border-l-2 border-primary pl-3">
                         "{hotspot?.scripture}"
                       </blockquote>
                     </div>

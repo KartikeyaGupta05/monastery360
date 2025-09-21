@@ -25,13 +25,7 @@ const FilterPanel = ({ filters, onFiltersChange, isOpen, onToggle, resultCount =
   ];
 
   const locationOptions = [
-    { value: 'all', label: 'All Locations', count: 156, flag: '🌍' },
-    { value: 'ladakh', label: 'Ladakh, India', count: 42, flag: '🇮🇳' },
     { value: 'sikkim', label: 'Sikkim, India', count: 38, flag: '🇮🇳' },
-    { value: 'himachal', label: 'Himachal Pradesh, India', count: 31, flag: '🇮🇳' },
-    { value: 'tibet', label: 'Tibet Region', count: 19, flag: '🏔️' },
-    { value: 'nepal', label: 'Nepal', count: 16, flag: '🇳🇵' },
-    { value: 'bhutan', label: 'Bhutan', count: 10, flag: '🇧🇹' }
   ];
 
   const verificationOptions = [

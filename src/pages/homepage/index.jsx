@@ -7,6 +7,13 @@ import WhyMattersSection from './components/WhyMattersSection';
 import InteractiveMuralSection from './components/InteractiveMuralSection';
 import MinistryCollaborationSection from './components/MinistryCollaborationSection';
 import CallToActionSection from './components/CallToActionSection';
+import { 
+  NarratedWalkthroughsSection,
+  InteractiveMapSection,
+  DigitalArchivesSection,
+  SmartAudioGuideSection,
+  CulturalCalendarSection 
+} from './components/FeatureSections';
 
 const Homepage = () => {
   return (
@@ -18,6 +25,11 @@ const Homepage = () => {
         <TourPreviewSection />
         <WhyMattersSection />
         <InteractiveMuralSection />
+        <NarratedWalkthroughsSection />
+        <InteractiveMapSection />
+        <DigitalArchivesSection />
+        <SmartAudioGuideSection />
+        <CulturalCalendarSection />
         <MinistryCollaborationSection />
         <CallToActionSection />
       </main>
