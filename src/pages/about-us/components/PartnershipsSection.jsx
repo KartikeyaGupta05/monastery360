@@ -6,71 +6,55 @@ const PartnershipsSection = () => {
   const monasteryPartners = [
     {
       id: 1,
-      name: "Hemis Monastery",
-      location: "Ladakh, India",
-      description: "One of the largest and wealthiest monasteries in Ladakh, known for its annual Hemis festival and ancient artifacts.",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      name: "Rumtek Monastery",
+      location: "Sikkim, India",
+      description: "One of the largest and most significant monasteries in Sikkim, known for its golden stupa, rare manuscripts, and the annual Kagyu festival.",
+      image: "../public/assets/images/rumtek.png",
       partnership: "Digital documentation and virtual tour development"
     },
     {
       id: 2,
-      name: "Tashilhunpo Monastery",
-      location: "Tibet, China",
-      description: "Historic monastery founded in 1447, traditional seat of the Panchen Lama with rich cultural heritage.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      name: "Dubdi Monastery",
+      location: "Sikkim, India",
+      description: "The oldest monastery in Sikkim, known for its historic significance, serene setting, and association with the founding of the kingdom.",
+      image: "../public/assets/images/Dubdi.png",
       partnership: "Cultural artifact preservation and AI storytelling integration"
     },
     {
       id: 3,
-      name: "Rongbuk Monastery",
-      location: "Everest Base Camp, Tibet",
-      description: "World's highest monastery at 5,009 meters, offering unique perspectives on mountain monastery life.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      name: "Phodong Monastery",
+      location: "Sikkim, India",
+      description: "One of the most important monasteries in North Sikkim, known for its vibrant murals, annual Cham dance festival, and Kagyu lineage.",
+      image: "../public/assets/images/Phodong.png",
       partnership: "Remote accessibility solutions and virtual pilgrimage experiences"
     }
   ];
 
   const governmentPartners = [
-    {
-      id: 1,
-      name: "Ministry of Tourism",
-      role: "Government of India",
-      description: "Supporting digital tourism initiatives and heritage preservation projects",
-      logo: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-    },
-    {
-      id: 2,
-      name: "Archaeological Survey of India",
-      role: "Heritage Documentation",
-      description: "Collaboration on digital archiving and cultural artifact preservation",
-      logo: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-    },
-    {
-      id: 3,
-      name: "Ladakh Tourism Board",
-      role: "Regional Partnership",
-      description: "Promoting sustainable tourism through digital monastery experiences",
-      logo: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-    }
-  ];
+  {
+    id: 1,
+    name: "Government of Sikkim",
+    role: "State Governance",
+    description: "Supporting digital monastery mapping, cultural preservation, and tourism development",
+    logo: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+  },
+  {
+    id: 2,
+    name: "Namgyal Institute of Tibetology",
+    role: "Cultural Research & Documentation",
+    description: "Collaboration on digitizing manuscripts, preserving monastic heritage, and providing authentic historical insights",
+    logo: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+  },
+  {
+    id: 3,
+    name: "Sikkim Tourism Development Corporation",
+    role: "Tourism Promotion",
+    description: "Partnering in promoting sustainable monastery tourism and enhancing visitor digital experiences",
+    logo: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+  }
+];
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Lama Tenzin Wangyal",
-      role: "Head Monk, Hemis Monastery",
-      quote: "Monastery360 has helped us share our sacred heritage with the world while maintaining the spiritual essence of our traditions. Their respectful approach to digitization is commendable.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-    },
-    {
-      id: 2,
-      name: "Dr. Rajesh Kumar",
-      role: "Director, Cultural Heritage Division",
-      quote: "This innovative platform represents the future of heritage preservation. The team\'s technical expertise combined with cultural sensitivity makes this project exceptional.",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-    }
-  ];
-
+  
   return (
     <section className="py-16 bg-muted">
       <div className="max-w-7xl mx-auto px-6">
@@ -147,41 +131,6 @@ const PartnershipsSection = () => {
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
                   {partner?.description}
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div>
-          <h3 className="font-heading text-2xl font-semibold text-foreground mb-8 text-center">
-            What Our Partners Say
-          </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {testimonials?.map((testimonial) => (
-              <div key={testimonial?.id} className="breathing-card bg-card rounded-xl p-6 border border-border">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                    <Image
-                      src={testimonial?.avatar}
-                      alt={testimonial?.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <blockquote className="font-body text-card-foreground mb-4 leading-relaxed italic">
-                      "{testimonial?.quote}"
-                    </blockquote>
-                    <div>
-                      <p className="font-heading font-semibold text-card-foreground">
-                        {testimonial?.name}
-                      </p>
-                      <p className="font-body text-sm text-muted-foreground">
-                        {testimonial?.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             ))}
           </div>
