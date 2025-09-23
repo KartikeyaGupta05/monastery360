@@ -10,6 +10,8 @@ import VirtualTourExperience from './pages/virtual-tour-experience';
 import AboutUs from './pages/about-us';
 import Homepage from './pages/homepage';
 import Events from './pages/cultural-events-festivals/Events';
+import NarratedWalkthroughs from "./pages/NarratedWalkthroughs";
+import InteractiveMonasteryMap from "./pages/InteractiveMonasteryMap";
 
 const Routes = () => {
   return (
@@ -27,6 +29,8 @@ const Routes = () => {
         <Route path="/events" element={<Events />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/NarratedWalkthroughs" element={<NarratedWalkthroughs />} />
+        <Route path="/InteractiveMonasteryMap" element={<InteractiveMonasteryMap />} />
       </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>

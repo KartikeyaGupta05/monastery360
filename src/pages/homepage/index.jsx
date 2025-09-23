@@ -15,6 +15,7 @@ import {
   CulturalCalendarSection 
 } from './components/FeatureSections';
 
+
 const Homepage = () => {
   return (
     <div className="min-h-screen bg-background">
