@@ -10,8 +10,12 @@ import VirtualTourExperience from './pages/virtual-tour-experience';
 import AboutUs from './pages/about-us';
 import Homepage from './pages/homepage';
 import Events from './pages/cultural-events-festivals/Events';
+ Om-Auth
+import Register from './pages/auth/Register';
+import Login from './pages/auth/Login';
 import DigitalArchivesPage from "./pages/digital-archieve";
 import SmartAudioGuidePage from "./pages/smart-audio-guide";
+ main
 
 const Routes = () => {
   return (
@@ -22,6 +26,8 @@ const Routes = () => {
         {/* Define your route here */}
         <Route path="/" element={<Homepage />} />
         <Route path="/artisan-connect-marketplace" element={<ArtisanConnectMarketplace />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/interactive-mandala-ai" element={<InteractiveMandalaAI />} />
         <Route path="/virtual-tour-experience" element={<VirtualTourExperience />} />
