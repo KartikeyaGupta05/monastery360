@@ -10,6 +10,7 @@ import {
   Building,
   Mountain,
   Sparkles,
+  ArrowLeft,
 } from "lucide-react";
 import Input from "../../components/ui/Input";
 import Button from "../../components/ui/Button";
@@ -74,6 +75,14 @@ const Register = () => {
 
           <div className="relative p-8 space-y-8">
             {/* Header */}
+             <Link
+              to="/"
+              className="absolute top-4 left-4 flex items-center gap-2 text-stone-600 hover:text-amber-700 transition"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              <span className="text-sm font-medium">Back</span>
+            </Link>
+
             <div className="text-center space-y-3">
               <div className="flex justify-center">
                 <div className="w-14 h-14 bg-gradient-to-tr from-amber-500 via-orange-600 to-red-700 rounded-xl flex items-center justify-center shadow-lg">
