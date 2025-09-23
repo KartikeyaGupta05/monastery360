@@ -10,6 +10,8 @@ import VirtualTourExperience from './pages/virtual-tour-experience';
 import AboutUs from './pages/about-us';
 import Homepage from './pages/homepage';
 import Events from './pages/cultural-events-festivals/Events';
+import NarratedWalkthroughs from "./pages/NarratedWalkthroughs";
+import InteractiveMonasteryMap from "./pages/InteractiveMonasteryMap";
 import Register from './pages/auth/Register';
 import Login from './pages/auth/Login';
 import DigitalArchivesPage from "./pages/digital-archieve";
@@ -35,6 +37,8 @@ const Routes = () => {
         <Route path="/digital-archives" element={<DigitalArchivesPage />} />
         <Route path="/smart-audio-guide" element={<SmartAudioGuidePage />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/NarratedWalkthroughs" element={<NarratedWalkthroughs />} />
+        <Route path="/InteractiveMonasteryMap" element={<InteractiveMonasteryMap />} />
       </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>

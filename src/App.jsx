@@ -1,6 +1,7 @@
 import React from "react";
 import Routes from "./Routes";
 import { Toaster } from 'react-hot-toast';
+import { Route } from "react-router-dom";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
 
       <Routes />
      <Toaster position="top-center" reverseOrder={false} />
+
     </div>
  
   );

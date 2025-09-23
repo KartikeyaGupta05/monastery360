@@ -54,7 +54,7 @@ const NarratedWalkthroughsSection = () => {
 
         {/* CTA */}
         <div className="pt-4">
-          <Link to="/virtual-tour-experience">
+          <Link to="/NarratedWalkthroughs">
             <Button 
               variant="default" 
               size="lg"
@@ -175,7 +175,7 @@ const InteractiveMapSection = () => {
 
             {/* CTA */}
             <div className="pt-4">
-              <Link to="/interactive-map">
+              <Link to="/InteractiveMonasteryMap">
                 <Button 
                   variant="default" 
                   size="lg"
