@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, Lock, Sparkles,ArrowLeft } from "lucide-react";
+import { Mail, Lock, Sparkles, ArrowLeft,} from "lucide-react";
 import Input from "../../components/ui/Input";
 import Button from "../../components/ui/Button";
 import { motion } from "framer-motion";
@@ -41,15 +41,15 @@ const Login = () => {
         <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-amber-200/40 relative overflow-hidden">
           {/* Glow border */}
           <div className="absolute inset-0 rounded-2xl border border-transparent bg-gradient-to-r from-amber-400/20 to-orange-500/20 animate-pulse" />
+
+          <div className="relative p-8 space-y-8">
            <Link
               to="/"
-              className="absolute top-4 left-4 flex items-center gap-2 text-stone-600 hover:text-amber-700 transition"
+              className="absolute top-4 left-4 cursor-pointer flex items-center gap-2 text-stone-600 hover:text-amber-700 transition"
             >
               <ArrowLeft className="w-5 h-5" />
               <span className="text-sm font-medium">Back</span>
             </Link>
-
-          <div className="relative p-8 space-y-8">
             {/* Header */}
             <div className="text-center space-y-3">
               <div className="flex justify-center">

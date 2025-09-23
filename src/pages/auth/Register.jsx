@@ -24,33 +24,83 @@ const Register = () => {
       case "tourist":
         return (
           <>
-            <Input label="Nationality" placeholder="e.g., Indian, American" icon={Globe} required />
-            <Input label="Travel Purpose" placeholder="e.g., Pilgrimage, Research" icon={BookOpen} required />
+            <Input
+              label="Nationality"
+              placeholder="e.g., Indian, American"
+              icon={Globe}
+              required
+            />
+            <Input
+              label="Travel Purpose"
+              placeholder="e.g., Pilgrimage, Research"
+              icon={BookOpen}
+              required
+            />
           </>
         );
       case "guide":
         return (
           <>
-            <Input label="Experience (years)" type="number" placeholder="e.g., 5" icon={Users} required />
-            <Input label="Languages Known" placeholder="e.g., English, Hindi, Tibetan" icon={Globe} required />
+            <Input
+              label="Experience (years)"
+              type="number"
+              placeholder="e.g., 5"
+              icon={Users}
+              required
+            />
+            <Input
+              label="Languages Known"
+              placeholder="e.g., English, Hindi, Tibetan"
+              icon={Globe}
+              required
+            />
           </>
         );
       case "monk":
         return (
           <>
-            <Input label="Monastery Name" placeholder="Enter your monastery" icon={Mountain} required />
-            <Input label="Years of Service" type="number" placeholder="e.g., 10" icon={BookOpen} required />
+            <Input
+              label="Monastery Name"
+              placeholder="Enter your monastery"
+              icon={Mountain}
+              required
+            />
+            <Input
+              label="Years of Service"
+              type="number"
+              placeholder="e.g., 10"
+              icon={BookOpen}
+              required
+            />
           </>
         );
       case "researcher":
         return (
           <>
-            <Input label="Institution / Organization" placeholder="e.g., Delhi University" icon={Building} required />
-            <Input label="Research Field" placeholder="e.g., Buddhist Studies" icon={BookOpen} required />
+            <Input
+              label="Institution / Organization"
+              placeholder="e.g., Delhi University"
+              icon={Building}
+              required
+            />
+            <Input
+              label="Research Field"
+              placeholder="e.g., Buddhist Studies"
+              icon={BookOpen}
+              required
+            />
           </>
         );
       case "admin":
-        return <Input label="Admin Code" type="password" placeholder="Enter admin code" icon={Lock} required />;
+        return (
+          <Input
+            label="Admin Code"
+            type="password"
+            placeholder="Enter admin code"
+            icon={Lock}
+            required
+          />
+        );
       default:
         return null;
     }
@@ -75,9 +125,9 @@ const Register = () => {
 
           <div className="relative p-8 space-y-8">
             {/* Header */}
-             <Link
+            <Link
               to="/"
-              className="absolute top-4 left-4 flex items-center gap-2 text-stone-600 hover:text-amber-700 transition"
+              className="absolute top-4 left-4 flex cursor-pointer items-center gap-2 text-stone-600 hover:text-amber-700 transition"
             >
               <ArrowLeft className="w-5 h-5" />
               <span className="text-sm font-medium">Back</span>
@@ -89,10 +139,14 @@ const Register = () => {
                   <Sparkles className="h-7 w-7 text-white" />
                 </div>
               </div>
-              <h2 className="text-3xl font-serif font-bold text-stone-900">Create Your Account</h2>
+              <h2 className="text-3xl font-serif font-bold text-stone-900">
+                Create Your Account
+              </h2>
               <p className="text-stone-600 text-sm">
                 Begin your journey with{" "}
-                <span className="text-amber-700 font-semibold">Monastery360</span>
+                <span className="text-amber-700 font-semibold">
+                  Monastery360
+                </span>
               </p>
             </div>
 
@@ -135,15 +189,40 @@ const Register = () => {
               </AnimatePresence>
 
               {/* Common fields */}
-              <Input label="Full Name" type="text" placeholder="John Doe" icon={User} required />
-              <Input label="Email" type="email" placeholder="you@example.com" icon={Mail} required />
-              <Input label="Password" type="password" placeholder="••••••••" icon={Lock} required />
+              <Input
+                label="Full Name"
+                type="text"
+                placeholder="John Doe"
+                icon={User}
+                required
+              />
+              <Input
+                label="Email"
+                type="email"
+                placeholder="you@example.com"
+                icon={Mail}
+                required
+              />
+              <Input
+                label="Password"
+                type="password"
+                placeholder="••••••••"
+                icon={Lock}
+                required
+              />
 
               {/* Terms */}
               <label className="flex items-center gap-2 text-sm text-stone-600">
-                <input type="checkbox" required className="rounded accent-amber-600" />
+                <input
+                  type="checkbox"
+                  required
+                  className="rounded accent-amber-600"
+                />
                 I agree to the{" "}
-                <Link to="/terms" className="text-amber-700 font-medium hover:underline">
+                <Link
+                  to="/terms"
+                  className="text-amber-700 font-medium hover:underline"
+                >
                   Terms & Conditions
                 </Link>
               </label>
@@ -160,7 +239,10 @@ const Register = () => {
             {/* Footer */}
             <p className="text-center text-sm text-stone-600">
               Already have an account?{" "}
-              <Link to="/login" className="text-amber-700 font-semibold hover:underline">
+              <Link
+                to="/login"
+                className="text-amber-700 font-semibold hover:underline"
+              >
                 Login
               </Link>
             </p>
