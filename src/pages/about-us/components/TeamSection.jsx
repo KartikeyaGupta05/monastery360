@@ -9,7 +9,7 @@ const TeamSection = () => {
       name: "Kartikeya Gupta",
       role: "Team Lead & Full Stack Developer",
       expertise: "React, Node.js, DataBase and Cloud",
-      image: "/assets/images/Kartikeya.jpg",
+      image: "/assets/images/team-mates/Kartikeya.jpg",
       linkedin: "https://www.linkedin.com/in/kartikeyagupta05/",
       github: "https://github.com/kartikeyagupta05"
     },
@@ -18,7 +18,7 @@ const TeamSection = () => {
       name: "Om Shukla",
       role: "UI/UX Designer & Frontend Developer",
       expertise: "Design Systems, React, Cultural Aesthetics",
-      image: "/assets/images/om.jpg",
+      image: "/assets/images/team-mates/om.jpg",
       linkedin: "https://www.linkedin.com/in/omshukla350/",
       github: "https://github.com/OmShukla350"
     },
@@ -27,7 +27,7 @@ const TeamSection = () => {
       name: "Rahul Sharma",
       role: "Backend Developer & DevOps",
       expertise: "Monastery History, Cultural Preservation",
-      image: "/assets/images/rahul.jpg",
+      image: "/assets/images/team-mates/rahul.jpg",
       linkedin: "https://www.linkedin.com/in/rahu-ul/",
       github: "https://github.com/rahu-ul"
     },
@@ -36,7 +36,7 @@ const TeamSection = () => {
       name: "Mridul Goyal",
       role: "AI/ML Engineer",
       expertise: "Computer Vision, NLP, Cultural AI",
-      image: "/assets/images/mridul.jpg",
+      image: "/assets/images/team-mates/mridul.jpg",
       linkedin: "https://www.linkedin.com/in/mridul-goyal-7221581b3/",
       github: "https://github.com/Mridultech"
     },
@@ -45,7 +45,7 @@ const TeamSection = () => {
       name: "Yash Khandelwal",
       role: "Cultural Researcher & Cloud Engineer",
       expertise: "Cloud Architecture, Database Design",
-      image: "/assets/images/yash.jpg",
+      image: "/assets/images/team-mates/yash.jpg",
       linkedin: "https://www.linkedin.com/in/yash-khandelwal-26a5012a9",
       github: "https://github.com/YashKhandelwal82"
     },
@@ -54,7 +54,7 @@ const TeamSection = () => {
       name: "Vaishnavi",
       role: "VR/AR Developer",
       expertise: "Three.js, WebXR, Immersive Experiences",
-      image: "/assets/images/vaishnavi.jpeg",
+      image: "/assets/images/team-mates/vaishnavi.jpeg",
       linkedin: "http://www.linkedin.com/in/vaishnavi-cse28",
       github: "https://github.com/2006vaishnaviglb-beep"
     }

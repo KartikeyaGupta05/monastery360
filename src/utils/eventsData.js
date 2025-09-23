@@ -8,7 +8,7 @@ const eventsData = [
     date: "2025-03-01",
     description:
       "Celebrate the Tibetan New Year with vibrant dances, rituals, and traditional performances.",
-    image: "../assets/images/Losar.png",
+    image: "/assets/images/culture-events-booking/Losar.png",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const eventsData = [
     date: "2025-06-15",
     description:
       "Marking the birth, enlightenment, and nirvana of Buddha with special prayers and ceremonies.",
-    image: "../assets/images/sagaDawa.png",
+    image: "/assets/images/culture-events-booking/sagaDawa.png",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const eventsData = [
     date: "2025-09-05",
     description:
       "Festival dedicated to Mount Khangchendzonga with warrior dances and sacred rituals.",
-    image: "../assets/images/phanglbhasol.png",
+    image: "/assets/images/culture-events-booking/phanglbhasol.png",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const eventsData = [
     date: "2025-07-27",
     description:
       "Commemorates Buddha's first teaching of the Four Noble Truths, marked with prayers and rituals.",
-    image: "../assets/images/Drupka.png",
+    image: "/assets/images/culture-events-booking/Drupka.png",
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ const eventsData = [
     date: "2025-12-06",
     description:
       "Colorful Cham masked dances symbolizing the victory of good over evil, performed by monks.",
-    image: "../assets/images/kagyed.png",
+    image: "/assets/images/culture-events-booking/kagyed.png",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const eventsData = [
     date: "2025-02-21",
     description:
       "A sacred water ritual believed to predict the prosperity and fortune of the year.",
-    image: "../assets/images/bhumchu.png",
+    image: "/assets/images/culture-events-booking/bhumchu.png",
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ const eventsData = [
     date: "2025-01-14",
     description:
       "Winter harvest festival celebrated with traditional dances, local fairs, and rituals.",
-    image: "../assets/images/maghe.png",
+    image: "/assets/images/culture-events-booking/maghe.png",
   },
   {
     id: 8,
@@ -71,7 +71,7 @@ const eventsData = [
     date: "2025-11-20",
     description:
       "Sacred masked Cham dance performed by monks to ward off evil and bring blessings.",
-    image: "../assets/images/Cham.png",
+    image: "/assets/images/culture-events-booking/Cham.png",
   },
   {
     id: 9,
@@ -79,8 +79,8 @@ const eventsData = [
     monastery: "Ralong Monastery",
     date: "2025-10-22",
     description:
-      "Commemorates Buddha’s descent from heaven after teaching his mother, celebrated with prayers.",
-    image: "../assets/images/Lhabab.png",
+      "Commemorates Buddha's descent from heaven after teaching his mother, celebrated with prayers.",
+    image: "/assets/images/culture-events-booking/Lhabab.png",
   },
   {
     id: 10,
@@ -89,7 +89,7 @@ const eventsData = [
     date: "2025-09-06",
     description:
       "Warrior dances performed by monks with traditional attire to honor the guardian deities.",
-    image: "../assets/images/phangcham.png",
+    image: "/assets/images/culture-events-booking/phangcham.png",
   },
 ];
 
