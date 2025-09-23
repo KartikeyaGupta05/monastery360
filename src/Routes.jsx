@@ -12,6 +12,10 @@ import Homepage from './pages/homepage';
 import Events from './pages/cultural-events-festivals/Events';
 import NarratedWalkthroughs from "./pages/NarratedWalkthroughs";
 import InteractiveMonasteryMap from "./pages/InteractiveMonasteryMap";
+import Register from './pages/auth/Register';
+import Login from './pages/auth/Login';
+import DigitalArchivesPage from "./pages/digital-archieve";
+import SmartAudioGuidePage from "./pages/smart-audio-guide";
 
 const Routes = () => {
   return (
@@ -22,12 +26,16 @@ const Routes = () => {
         {/* Define your route here */}
         <Route path="/" element={<Homepage />} />
         <Route path="/artisan-connect-marketplace" element={<ArtisanConnectMarketplace />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/interactive-mandala-ai" element={<InteractiveMandalaAI />} />
         <Route path="/virtual-tour-experience" element={<VirtualTourExperience />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/events" element={<Events />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/digital-archives" element={<DigitalArchivesPage />} />
+        <Route path="/smart-audio-guide" element={<SmartAudioGuidePage />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/NarratedWalkthroughs" element={<NarratedWalkthroughs />} />
         <Route path="/InteractiveMonasteryMap" element={<InteractiveMonasteryMap />} />

@@ -27,8 +27,8 @@ const InteractiveMandalaAI = () => {
       title: 'Green Tara Mandala',
       origin: 'Tibetan Buddhist',
       difficulty: 'beginner',
-      imageUrl: '/assets/images/image5.png',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop',
+      imageUrl: '/assets/images/Virtual-tour/image5.png',
+      thumbnailUrl: '/assets/images/Virtual-tour/image5.png',
       description: `The Green Tara Mandala represents compassion and protection in Tibetan Buddhism.\nThis sacred artwork features intricate geometric patterns surrounding the central deity.`,
       hotspots: [
         {
@@ -128,8 +128,8 @@ const InteractiveMandalaAI = () => {
       title: 'Medicine Buddha Mandala',
       origin: 'Tibetan Healing Tradition',
       difficulty: 'intermediate',
-      imageUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=800&fit=crop',
-      thumbnailUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=300&fit=crop',
+      imageUrl: '/assets/images/Virtual-tour/image5.png',
+      thumbnailUrl: '/assets/images/Virtual-tour/image5.png',
       description: `The Medicine Buddha Mandala focuses on healing and the alleviation of suffering.\nThis mandala contains powerful symbols for physical, mental, and spiritual healing.`,
       hotspots: [
         {
@@ -184,7 +184,7 @@ const InteractiveMandalaAI = () => {
     },
     {
       id: 'kalachakra-mandala',title: 'Kalachakra Mandala',origin: 'Advanced Tantric Practice',
-      difficulty: 'advanced',imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=800&fit=crop',thumbnailUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=300&h=300&fit=crop',
+      difficulty: 'advanced',imageUrl: '/assets/images/Virtual-tour/image5.png',thumbnailUrl: '/assets/images/Virtual-tour/image5.png',
       description: `The Kalachakra Mandala represents the wheel of time and the cosmic cycles.\nThis is one of the most complex mandalas in Tibetan Buddhism, containing over 700 deities.`,
       hotspots: [
         {

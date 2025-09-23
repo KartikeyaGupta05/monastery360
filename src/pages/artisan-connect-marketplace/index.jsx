@@ -39,7 +39,7 @@ const ArtisanConnectMarketplace = () => {
       id: 1,
       name: "Sacred Thangka - Chenrezig (Avalokiteshvara)",
       artisanName: "Pema Dorjee",
-      image: "/assets/images/Aimg3.jpg",
+      image: "/assets/images/artisans-connect/Aimg3.jpg",
       profileImage: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       location: "Gangtok, Sikkim",
       price: 3200,
@@ -58,7 +58,7 @@ const ArtisanConnectMarketplace = () => {
       inStock: true,
       craftType: 'thangka',
       gallery: [
-        "/assets/images/Aimg3.jpg",
+        "/assets/images/artisans-connect/Aimg3.jpg",
         "https://images.unsplash.com/photo-1584277260435-9a3e0b7f5e2a?w=400",
         "https://images.unsplash.com/photo-1602143470302-7d64d8a0e7b4?w=400"
       ]
@@ -67,7 +67,7 @@ const ArtisanConnectMarketplace = () => {
       id: 2,
       name: "Handwoven Tibetan Carpet - Dragon Motif",
       artisanName: "Sonam Choden",
-      image: "/assets/images/A img1.jpg",
+      image: "/assets/images/artisans-connect/A img1.jpg",
       profileImage: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       location: "Gangtok, Sikkim",
       price: 4800,
@@ -83,7 +83,7 @@ const ArtisanConnectMarketplace = () => {
       inStock: true,
       craftType: 'handwoven-carpets',
       gallery: [
-        "/assets/images/A img1.jpg",
+        "/assets/images/artisans-connect/A img1.jpg",
         "https://images.unsplash.com/photo-1602526216513-b2f8c9a3e6a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "https://images.unsplash.com/photo-1602144094701-4b0c55c37a93?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
       ]
@@ -92,7 +92,7 @@ const ArtisanConnectMarketplace = () => {
       id: 3,
       name: "Lepcha Handwoven Shawl - Traditional Pattern",
       artisanName: "Meyden Lepcha",
-      image: "/assets/images/Aimg5.jpg",
+      image: "/assets/images/artisans-connect/Aimg5.jpg",
       profileImage: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       location: "Dzongu, Sikkim",
       price: 2200,
@@ -108,7 +108,7 @@ const ArtisanConnectMarketplace = () => {
       inStock: true,
       craftType: 'lepcha-weaves',
       gallery: [
-        "/assets/images/Aimg5.jpg",
+        "/assets/images/artisans-connect/Aimg5.jpg",
         "https://images.unsplash.com/photo-1582582628533-2e36fcff7bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "https://images.unsplash.com/photo-1602143925094-20f6d9d8d8b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
       ]
@@ -117,7 +117,7 @@ const ArtisanConnectMarketplace = () => {
       id: 4,
       name: "Temi Organic Tea - First Flush",
       artisanName: "Temi Tea Estate Cooperative",
-      image: "/assets/images/Aimg6.jpg",
+      image: "/assets/images/artisans-connect/Aimg6.jpg",
       profileImage: "https://images.unsplash.com/photo-1590080875832-13a3d95cdb3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       location: "Temi, South Sikkim",
       price: 650,
@@ -133,7 +133,7 @@ const ArtisanConnectMarketplace = () => {
       inStock: true,
       craftType: 'temi-tea',
       gallery: [
-        "/assets/images/Aimg6.jpg",
+        "/assets/images/artisans-connect/Aimg6.jpg",
         "https://images.unsplash.com/photo-1600508774502-0e1bb529d590?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "https://images.unsplash.com/photo-1576169219533-bd9bcb0f0c7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
       ]
@@ -142,7 +142,7 @@ const ArtisanConnectMarketplace = () => {
   id: 5,
   name: "Choktse Folding Table - Handcrafted Design",
   artisanName: "Tashi Bhutia",
-  image: "/assets/images/Aimg8.jpg",
+  image: "/assets/images/artisans-connect/Aimg8.jpg",
   profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
   location: "Gangtok, Sikkim",
   price: 5200,
@@ -158,7 +158,7 @@ const ArtisanConnectMarketplace = () => {
   inStock: true,
   craftType: 'choktse-tables',
   gallery: [
-    "/assets/images/Aimg8.jpg",
+    "/assets/images/artisans-connect/Aimg8.jpg",
     "https://images.unsplash.com/photo-1602524918303-5d28e5d9c2c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     "https://images.unsplash.com/photo-1602524956102-3f8b9a9f22e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
   ]
@@ -168,7 +168,7 @@ const ArtisanConnectMarketplace = () => {
       id: 6,
       name: "Traditional Sikkimese Jewellery - Coral & Turquoise Necklace",
       artisanName: "Namgyal Bhutia",
-      image:"/assets/images/Aimg4.jpg",
+      image:"/assets/images/artisans-connect/Aimg4.jpg",
       profileImage: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       location: "Gangtok, Sikkim",
       price: 2800,
@@ -184,7 +184,7 @@ const ArtisanConnectMarketplace = () => {
       inStock: true,
       craftType: 'traditional-jewellery',
       gallery: [
-        "/assets/images/Aimg4.jpg",
+        "/assets/images/artisans-connect/Aimg4.jpg",
         "https://images.unsplash.com/photo-1605025183246-42b9a8b9d06b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "https://images.unsplash.com/photo-1602144051823-9a80c7c1f16f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
       ]
@@ -193,7 +193,7 @@ const ArtisanConnectMarketplace = () => {
       id: 7,
       name: "Handwoven Bamboo & Cane Basket - Utility Design",
       artisanName: "Phurba Tamang",
-      image: "/assets/images/Aimg7.jpg",
+      image: "/assets/images/artisans-connect/Aimg7.jpg",
       profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       location: "Namchi, Sikkim",
       price: 850,
@@ -209,7 +209,7 @@ const ArtisanConnectMarketplace = () => {
       inStock: true,
       craftType: 'bamboo-cane',
       gallery: [
-        "/assets/images/Aimg7.jpg",
+        "/assets/images/artisans-connect/Aimg7.jpg",
         "https://images.unsplash.com/photo-1602144123459-f2b3c718e541?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "https://images.unsplash.com/photo-1602524907824-7e54b01d3a9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
       ]
@@ -218,7 +218,7 @@ const ArtisanConnectMarketplace = () => {
   id: 9,
   name: "Traditional Wooden Mask",
   artisanName: "Pema Dorjee",
-  image: "/assets/images/Aimg2.jpg",
+  image: "/assets/images/artisans-connect/Aimg2.jpg",
   profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150",
   location: "Sikkim, India",
   price: 2500,
@@ -234,7 +234,7 @@ const ArtisanConnectMarketplace = () => {
   inStock: true,
   craftType: 'woodwork', 
    gallery: [
-        "/assets/images/Aimg2.jpg",
+        "/assets/images/artisans-connect/Aimg2.jpg",
         "https://images.unsplash.com/photo-1602144123459-f2b3c718e541?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "https://images.unsplash.com/photo-1602524907824-7e54b01d3a9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
       ]

@@ -69,7 +69,8 @@ const Homepage = () => {
                 <li><a href="/virtual-tour-experience" className="text-background/80 hover:text-background transition-colors">Virtual Tours</a></li>
                 <li><a href="/interactive-mandala-ai" className="text-background/80 hover:text-background transition-colors">Mandala AI</a></li>
                 <li><a href="/artisan-connect-marketplace" className="text-background/80 hover:text-background transition-colors">Artisan Connect</a></li>
-                <li><a href="/about-us" className="text-background/80 hover:text-background transition-colors">About Us</a></li>
+                <li><a href="/" className="text-background/80 hover:text-background transition-colors">Narrated Walkthrough</a></li>
+                <li><a href="/events" className="text-background/80 hover:text-background transition-colors">Cultural Events</a></li>
               </ul>
             </div>
 
@@ -78,6 +79,7 @@ const Homepage = () => {
               <h4 className="font-heading font-semibold text-lg mb-4">Connect</h4>
               <ul className="space-y-2 font-body">
                 <li><a href="/contact" className="text-background/80 hover:text-background transition-colors">Contact Us</a></li>
+                <li><a href="/about-us" className="text-background/80 hover:text-background transition-colors">About Us</a></li>
                 <li><a href="#" className="text-background/80 hover:text-background transition-colors">Support</a></li>
                 <li><a href="#" className="text-background/80 hover:text-background transition-colors">Community</a></li>
                 <li><a href="#" className="text-background/80 hover:text-background transition-colors">Newsletter</a></li>

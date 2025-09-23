@@ -33,7 +33,8 @@ const Header = () => {
     { label: 'Artisan Connect', path: '/artisan-connect-marketplace', icon: 'ShoppingBag' },
     { label: 'Events', path: '/events', icon: 'Calendar' },
     { label: 'About', path: '/about-us', icon: 'Users' },
-    { label: 'Contact', path: '/contact', icon: 'MessageCircle' }
+    { label: 'Contact', path: '/contact', icon: 'MessageCircle' },
+    {label: 'Login', path: '/login', icon: 'LogIn' },
   ];
 
   const isActiveRoute = (path) => {
@@ -81,16 +82,7 @@ const Header = () => {
             to="/"
             className="flex items-center space-x-3 group"
           >
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-              <svg
-                viewBox="0 0 24 24"
-                className="w-6 h-6 text-primary-foreground"
-                fill="currentColor"
-              >
-                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
-            </div>
+            <img className='w-12 h-10' src="/assets/images/logo.png" alt="Monastery360 Logo" />
             <div className="hidden sm:block">
               <h1 className={`font-heading font-semibold text-xl transition-colors duration-300 ${logoTextClasses}`}>
                 Monastery360

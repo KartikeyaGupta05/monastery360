@@ -18,11 +18,11 @@ import HelpOverlay from "./components/HelpOverlay";
 
 export default function VirtualTourExperience() {
   const images = [
-    "/assets/images/image1.jpg",
-    "/assets/images/image6.png",
-    "/assets/images/image3.png",
-    "/assets/images/image5.png",
-    "/assets/images/image4.png",
+    "/assets/images/Virtual-tour/image1.jpg",
+    "/assets/images/Virtual-tour/image6.png",
+    "/assets/images/Virtual-tour/image3.png",
+    "/assets/images/Virtual-tour/image5.png",
+    "/assets/images/Virtual-tour/image4.png",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

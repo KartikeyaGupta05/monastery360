@@ -74,7 +74,7 @@ const NarratedWalkthroughsSection = () => {
           <div className="relative group">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
               <Image
-                src="/assets/images/fimg5.jpg"
+                src="/assets/images/features/fimg5.jpg"
                 alt="Monk narrating monastery tour"
                 className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -119,7 +119,7 @@ const InteractiveMapSection = () => {
           <div className="relative group">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
               <Image
-                src="/assets/images/fimg1.png"
+                src="/assets/images/features/fimg1.png"
                 alt="Interactive map of Sikkim monasteries"
                 className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -265,7 +265,7 @@ const DigitalArchivesSection = () => {
           <div className="relative group">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
               <Image
-                src="/assets/images/fimg2.png"
+                src="/assets/images/features/fimg2.png"
                 alt="Ancient manuscript being digitally archived"
                 className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -309,7 +309,7 @@ const SmartAudioGuideSection = () => {
           <div className="relative group">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
               <Image
-                src="/assets/images/fimg6.jpg"
+                src="/assets/images/features/fimg6.jpg"
                 alt="Tourist using smart audio guide in monastery"
                 className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -365,7 +365,7 @@ const SmartAudioGuideSection = () => {
 
             {/* CTA */}
             <div className="pt-4">
-              <Link to="/audio-guide">
+              <Link to="/smart-audio-guide">
                 <Button 
                   variant="default" 
                   size="lg"
@@ -437,7 +437,7 @@ const CulturalCalendarSection = () => {
 
             {/* CTA */}
             <div className="pt-4">
-              <Link to="/cultural-calendar">
+              <Link to="/events">
                 <Button 
                   variant="default" 
                   size="lg"
@@ -455,7 +455,7 @@ const CulturalCalendarSection = () => {
           <div className="relative group">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
               <Image
-                src="/assets/images/fimg4.jpg"
+                src="/assets/images/features/fimg4.jpg"
                 alt="Buddhist festival celebration in Sikkim monastery"
                 className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
               />
