@@ -23,7 +23,6 @@ const Routes = () => {
       <ErrorBoundary>
       <ScrollToTop />
       <RouterRoutes>
-        {/* Define your route here */}
         <Route path="/" element={<Homepage />} />
         <Route path="/artisan-connect-marketplace" element={<ArtisanConnectMarketplace />} />
         <Route path="/register" element={<Register />} />
