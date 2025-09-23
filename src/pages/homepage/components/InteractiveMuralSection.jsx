@@ -52,7 +52,7 @@ const InteractiveMuralSection = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
               <Image
-                src="/assets/images/image5.png"
+                src="/assets/images/Virtual-tour/image5.png"
                 alt="Ancient monastery mural with interactive hotspots"
                 className="w-full h-96 md:h-[500px] object-cover"
               />
