@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, SkipBack, SkipForward, Volume2, Heart, Share2, Star, ChevronDown, ChevronUp, Download } from 'lucide-react';
+import Header from 'components/ui/Header';
 
 // Dummy data
 const narrations = [
@@ -15,7 +16,7 @@ const narrations = [
     transcript: 'Welcome to the Hall of Wisdom, where art becomes prayer and philosophy takes form. These walls have witnessed centuries of devotion, each brushstroke carrying the weight of spiritual understanding. The central mandala before us represents the universe in perfect harmony...',
     rating: 4.8,
     isOfflineReady: true,
-    imageUrl: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=250&fit=crop'
+    imageUrl: '/assets/images/monasteries/rumtek.jpeg'
   },
   {
     id: '2',
@@ -29,7 +30,7 @@ const narrations = [
     transcript: 'The morning ceremony begins before dawn, as it has for eight hundred years. The sound of bells awakens not just the monastery, but the spiritual consciousness within each practitioner...',
     rating: 4.9,
     isOfflineReady: true,
-    imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop'
+    imageUrl: '/assets/images/monasteries/pemayangtse.jpeg'
   },
   {
     id: '3',
@@ -43,7 +44,7 @@ const narrations = [
     transcript: 'Each pillar, each beam, each carefully placed stone serves a purpose beyond mere construction. The architecture itself becomes a teacher, guiding visitors through a physical and spiritual journey...',
     rating: 4.7,
     isOfflineReady: false,
-    imageUrl: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=250&fit=crop'
+    imageUrl: '/assets/images/monasteries/thangka.jpeg'
   },
   {
     id: '4',
@@ -57,7 +58,7 @@ const narrations = [
     transcript: 'ॐ मणिपद्मे हूं - यह मंत्र केवल शब्दों का समूह नहीं है, बल्कि एक संपूर्ण आध्यात्मिक यात्रा है। प्रत्येक अक्षर में छुपा है गहरा दर्शन...',
     rating: 4.6,
     isOfflineReady: true,
-    imageUrl: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop'
+    imageUrl: '/assets/images/monasteries/tashiding.jpg'
   },
   {
     id: '5',
@@ -71,7 +72,7 @@ const narrations = [
     transcript: 'हिमालयको यो पवित्र भूमिमा शताब्दीयौंदेखि आध्यात्मिक साधनाको धारा बगिरहेको छ। यहाँका प्रत्येक ढुङ्गाले, प्रत्येक रूखले आध्यात्मिक कथा भन्छ...',
     rating: 4.5,
     isOfflineReady: true,
-    imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop'
+    imageUrl: '/assets/images/monasteries/rituals.jpg'
   },
   {
     id: '6',
@@ -85,7 +86,7 @@ const narrations = [
     transcript: 'In our meditation garden, nature becomes the greatest teacher. The gentle rustle of bamboo speaks of impermanence, while the steadfast mountains remind us of eternal truths...',
     rating: 4.9,
     isOfflineReady: false,
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop'
+    imageUrl: '/assets/images/monasteries/manuscript.jpeg'
   }
 ];
 
@@ -95,34 +96,36 @@ const narrators = [
     name: 'Ven. Tenzin Norbu',
     role: 'Senior Resident Monk',
     quote: 'Each prayer wheel spun carries the hopes of countless souls',
-    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+    imageUrl: '/assets/images/team-mates/yash.jpg'
   },
   {
     id: '2',
     name: 'Dr. Pema Wangchuk',
     role: 'Cultural Historian',
     quote: 'History lives in these walls, waiting to speak to open hearts',
-    imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+    imageUrl: '/assets/images/team-mates/rahul.jpg'
   },
   {
     id: '3',
     name: 'Ven. Karma Choephel',
     role: 'Ritual Master',
     quote: 'In ceremony, we touch the eternal through the temporal',
-    imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'
+    imageUrl: '/assets/images/team-mates/mridul.jpg'
   },
   {
     id: '4',
     name: 'Sister Mary Catherine',
     role: 'Garden Keeper',
     quote: 'Every flower that blooms here is a prayer made visible',
-    imageUrl: 'https://images.unsplash.com/photo-1494790108755-2616b332c133?w=150&h=150&fit=crop&crop=face'
+    imageUrl: '/assets/images/team-mates/om.jpg'
   }
 ];
 
 // Components
 const HeroSection = ({ onStartListening }) => {
   return (
+    <>
+    <Header />
     <div className="relative h-screen flex items-center justify-center bg-gradient-to-b from-orange-50 to-orange-100">
       <div
         className="absolute inset-0 bg-cover bg-center bg-blend-overlay"
@@ -150,6 +153,7 @@ const HeroSection = ({ onStartListening }) => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

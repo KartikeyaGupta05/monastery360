@@ -23,7 +23,7 @@ const TourPreviewSection = () => {
           <div className="relative group">
             <div className="relative overflow-hidden rounded-2xl spiritual-shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                  src="/assets/images/monasteries/rumtek.jpeg"
                   alt="360 degree monastery tour preview"
                   className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                 />

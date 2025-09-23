@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Filter, MapPin, Navigation, Clock, Car, Bus, Users, Star, Bookmark, Route, Phone, Globe } from 'lucide-react';
+import Header from 'components/ui/Header';
 
 // Sample monastery data
 const monasteryData = [
@@ -329,6 +330,8 @@ const SikkimMonasteryMap = () => {
   };
 
   return (
+    <>
+      <Header />
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-amber-800 via-orange-700 to-red-800 text-white">
@@ -631,6 +634,7 @@ const SikkimMonasteryMap = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 
