@@ -1,104 +1,138 @@
-# React
+# Monastery360 – Digital Heritage Platform for Sikkim’s Monasteries
 
-A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+🚀 **Preserving the sacred heritage of Sikkim’s monasteries through immersive VR, AI-powered narration, and a digital marketplace supporting local communities.**
 
-## 🚀 Features
+---
 
-- **React 18** - React version with improved rendering and concurrent features
-- **Vite** - Lightning-fast build tool and development server
-- **Redux Toolkit** - State management with simplified Redux setup
-- **TailwindCSS** - Utility-first CSS framework with extensive customization
-- **React Router v6** - Declarative routing for React applications
-- **Data Visualization** - Integrated D3.js and Recharts for powerful data visualization
-- **Form Management** - React Hook Form for efficient form handling
-- **Animation** - Framer Motion for smooth UI animations
-- **Testing** - Jest and React Testing Library setup
+## 📖 Overview
 
-## 📋 Prerequisites
+Sikkim is home to more than **200 ancient monasteries**, many dating back to the **17th and 18th centuries**, each carrying spiritual, cultural, and architectural significance. Unfortunately, many remain inaccessible to tourists and researchers due to geography, lack of awareness, and limited preservation efforts.
 
-- Node.js (v14.x or higher)
-- npm or yarn
+**Monastery360** solves this challenge by creating a **digital heritage platform** where users can:
 
-## 🛠️ Installation
+* Explore monasteries in **360° Virtual Reality**
+* Access **digitized archives of manuscripts and murals**
+* Experience **AI-powered cultural narration**
+* Support local communities via a **digital artisan marketplace**
 
-1. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-   
-2. Start the development server:
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
+Our vision: **Where ancient wisdom meets modern innovation.**
 
-## 📁 Project Structure
+---
+
+## ✨ Key Features
+
+* **🌐 Virtual Tours** – 360° panoramic monastery walkthroughs (VR-enabled).
+* **🗣️ Narrated Walkthroughs** – Multi-language cultural storytelling.
+* **🗺️ Interactive Map** – Geo-tagged monastery locations with nearby attractions.
+* **📚 Digital Archives** – Rare manuscripts, murals, and historical documents.
+* **🤖 AI-Powered Search** – Intelligent categorization and discovery.
+* **🎧 Smart Audio Guide** – Bluetooth/GPS-based location-aware guides.
+* **📅 Cultural Calendar** – Festivals, rituals, and events schedule.
+* **🛍️ Artisan Marketplace** – Promote & support local handicrafts.
+* **📶 Offline Mode** – Accessible in remote regions without internet.
+
+---
+
+## 🏗️ Architecture
+
+* **Frontend**: React.js, Next.js, TailwindCSS, Three.js, Framer Motion
+* **Backend**: Node.js, Express.js, GraphQL, Django *(separate repo linked below)*
+* **Database**: MongoDB, Firebase, MySQL, PostgreSQL
+* **AI/ML**: TensorFlow, PyTorch, OpenAI APIs, Unity3D for VR
+* **Deployment**: Vercel, Netlify, Google Cloud, Render
+
+---
+
+## 🔗 Backend Repository
+
+👉 [Monastery360 Backend Repo](https://github.com/KartikeyaGupta05/monastery360-backend)
+
+This repo handles:
+
+* User authentication & authorization
+* API for monastery archives & 3D models
+* AI-powered cultural narration service
+* Admin dashboard for cultural data uploads
+
+---
+
+## 📂 Project Structure
 
 ```
-react_app/
-├── public/             # Static assets
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Page components
-│   ├── styles/         # Global styles and Tailwind configuration
-│   ├── App.jsx         # Main application component
-│   ├── Routes.jsx      # Application routes
-│   └── index.jsx       # Application entry point
-├── .env                # Environment variables
-├── index.html          # HTML template
-├── package.json        # Project dependencies and scripts
-├── tailwind.config.js  # Tailwind CSS configuration
-└── vite.config.js      # Vite configuration
+Monastery360/
+│── public/              # Static assets (icons, images, 3D models)
+│── src/
+│   ├── components/      # Reusable React components
+│   ├── pages/           # Next.js pages
+│   ├── styles/          # TailwindCSS styles
+│   ├── utils/           # Helper functions
+│   └── hooks/           # Custom hooks
+│── package.json
+│── README.md
 ```
 
-## 🧩 Adding Routes
+---
 
-To add new routes to the application, update the `Routes.jsx` file:
+## ⚙️ Installation & Setup
 
-```jsx
-import { useRoutes } from "react-router-dom";
-import HomePage from "pages/HomePage";
-import AboutPage from "pages/AboutPage";
+### Prerequisites
 
-const ProjectRoutes = () => {
-  let element = useRoutes([
-    { path: "/", element: <HomePage /> },
-    { path: "/about", element: <AboutPage /> },
-    // Add more routes as needed
-  ]);
+* Node.js >= 16
+* npm or yarn
+* MongoDB / Firebase instance
 
-  return element;
-};
-```
-
-## 🎨 Styling
-
-This project uses Tailwind CSS for styling. The configuration includes:
-
-- Forms plugin for form styling
-- Typography plugin for text styling
-- Aspect ratio plugin for responsive elements
-- Container queries for component-specific responsive design
-- Fluid typography for responsive text
-- Animation utilities
-
-## 📱 Responsive Design
-
-The app is built with responsive design using Tailwind CSS breakpoints.
-
-
-## 📦 Deployment
-
-Build the application for production:
+### Steps
 
 ```bash
-npm run build
+# Clone the repo
+git clone https://github.com/KartikeyaGupta05/monastery360.git
+
+# Navigate to project
+cd monastery360
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
 ```
 
-## 🙏 Acknowledgments
-- Inspired by modern web development practices
-- Powered by React and Vite
-- Styled with Tailwind CSS
+Visit: **[http://localhost:4028](http://localhost:4028)** 🎉
+
+---
+
+## 🌍 Impact
+
+* **Tourism Boost** – Making monasteries globally accessible.
+* **Cultural Preservation** – Digitizing endangered heritage.
+* **Community Empowerment** – Supporting local artisans & guides.
+* **Educational Outreach** – Helping researchers & students.
+
+---
+
+## 🤝 Contribution
+
+We welcome contributions!
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m "Add new feature"`)
+4. Push the branch (`git push origin feature-name`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 🏛️ Supported By
+
+* **Government of Sikkim** (Official support for heritage digitization)
+* **Ministry of Tourism (Sikkim)**
+
+---
+
+✨ *Preserving the past, empowering the present, inspiring the future.*
