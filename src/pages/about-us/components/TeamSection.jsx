@@ -16,7 +16,7 @@ const TeamSection = () => {
     {
       id: 2,
       name: "Om Shukla",
-      role: "UI/UX Designer & Frontend Developer",
+      role: "Frontend Developer",
       expertise: "Design Systems, React, Cultural Aesthetics",
       image: "/assets/images/team-mates/om.jpg",
       linkedin: "https://www.linkedin.com/in/omshukla350/",
@@ -26,7 +26,7 @@ const TeamSection = () => {
       id: 3,
       name: "Rahul Sharma",
       role: "Backend Developer & DevOps",
-      expertise: "Monastery History, Cultural Preservation",
+      expertise: "Node.js, Express, MongoDB, CI/CD",
       image: "/assets/images/team-mates/rahul.jpg",
       linkedin: "https://www.linkedin.com/in/rahu-ul/",
       github: "https://github.com/rahu-ul"
@@ -43,8 +43,8 @@ const TeamSection = () => {
     {
       id: 5,
       name: "Yash Khandelwal",
-      role: "Cultural Researcher & Cloud Engineer",
-      expertise: "Cloud Architecture, Database Design",
+      role: "UI/UX Designer",
+      expertise: "UI Design, User Research, Prototyping",
       image: "/assets/images/team-mates/yash.jpg",
       linkedin: "https://www.linkedin.com/in/yash-khandelwal-26a5012a9",
       github: "https://github.com/YashKhandelwal82"
@@ -52,8 +52,8 @@ const TeamSection = () => {
     {
       id: 6,
       name: "Vaishnavi",
-      role: "VR/AR Developer",
-      expertise: "Three.js, WebXR, Immersive Experiences",
+      role: "Cultural Researcher",
+      expertise: "Monastery History, Cultural Preservation",
       image: "/assets/images/team-mates/vaishnavi.jpeg",
       linkedin: "http://www.linkedin.com/in/vaishnavi-cse28",
       github: "https://github.com/2006vaishnaviglb-beep"

@@ -16,6 +16,7 @@ import Register from './pages/auth/Register';
 import Login from './pages/auth/Login';
 import DigitalArchivesPage from "./pages/digital-archieve";
 import SmartAudioGuidePage from "./pages/smart-audio-guide";
+import VirtualTour360View from "pages/virtual-tour-experience/components/Virtual_tour_360";
 
 const Routes = () => {
   return (
@@ -38,6 +39,7 @@ const Routes = () => {
         <Route path="*" element={<NotFound />} />
         <Route path="/NarratedWalkthroughs" element={<NarratedWalkthroughs />} />
         <Route path="/InteractiveMonasteryMap" element={<InteractiveMonasteryMap />} />
+        <Route path="/vr-360" element={<VirtualTour360View />} />
       </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>
